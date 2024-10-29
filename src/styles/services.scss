@@ -1,21 +1,49 @@
-.services {
-	position: relative; /* Pozwala na pozycjonowanie pseudo-elementu */
+.service-image {
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.services::before {
-	content: ''; /* Wymagana zawartość dla pseudo-elementu */
-	position: absolute; /* Umożliwia swobodne pozycjonowanie */
-	top: -50px; /* Ustawienie powyżej kontenera */
-	left: 0; /* Rozpoczyna od lewej krawędzi */
-	right: 0; /* Rozciąga się do prawej krawędzi */
-	height: 100px; /* Wysokość skosu */
-	background-color: white; /* Dziedziczy kolor tła z .services */
-	transform: skewY(-4deg); /* Skos w osi Y o -4 stopnie */
-	z-index: 0; /* Ustawienie za zawartością */
+.service-image-1 {
+	background-image: url(../assets/images/services/service-1.png);
 }
 
-.services-content {
-	position: relative; /* Umożliwia normalne pozycjonowanie zawartości */
-	padding: 20px; /* Margines wewnętrzny */
-	z-index: 1; /* Ustawienie nad pseudo-elementem */
+.service-image-2 {
+	background-image: url(../assets/images/services/service-2.png);
+}
+
+.service-image-3 {
+	background-image: url(../assets/images/services/service-3.png);
+}
+
+.services__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.service {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.service-image {
+	display: flex;
+	margin: 30px 0;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+}
+
+.service-text {
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+	font-weight: 500;
 }

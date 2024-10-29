@@ -3,19 +3,26 @@ import React from 'react'
 import './App.css'
 import Menu from './components/Menu'
 import Header from './components/Header'
-import Services from './components/Services'
+import DiagonalComponent from './components/DiagonalComponent'
 import About from './components/About'
-import Images from './components/Images'
+import Story from './components/Story'
+import BigImage from './components/BigImage'
+import Projects from './components/Projects'
+import Services from './components/Services'
 import './styles/all.scss'
+import image1 from './assets/images/images/image4.jpeg'
 
 function App() {
 	return (
 		<div className='app'>
 			<Header />
 			<Menu />
-			<Services />
+			<DiagonalComponent />
+			<Story />
 			<About />
-			<Images />
+			<BigImage img={image1} />
+			<Services />
+			<Projects />
 		</div>
 	)
 }

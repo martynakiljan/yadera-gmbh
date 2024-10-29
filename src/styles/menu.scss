@@ -10,11 +10,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	@include md-min {
-		max-width: 800px;
-		margin: 0 auto;
-	}
+	@include content-width();
 }
 
 .menu__list {
@@ -66,9 +62,8 @@
 
 .menu__link--contact {
 	padding: 10px;
-
-	svg {
-		transform: rotate(-34deg);
+	span {
+		padding: 5px;
 	}
 }
 

@@ -2,8 +2,9 @@
 @import './variables';
 
 .section {
+	@include content-width();
+
 	@include md-min {
-		max-width: $max-width;
 		display: flex;
 		margin: 0 auto;
 		justify-content: space-between;
@@ -12,9 +13,9 @@
 }
 
 .section-col__left {
-	width: 15%;
+	width: 25%;
 }
 
 .section-col__right {
-	width: 80%;
+	width: 75%;
 }

@@ -1,0 +1,15 @@
+.diagonal-component {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -50px;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background-color: white;
+		transform: skewY(-4deg);
+		z-index: 0;
+	}
+}
