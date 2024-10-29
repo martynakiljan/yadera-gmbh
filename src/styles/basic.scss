@@ -20,10 +20,10 @@ html {
 
 body {
 	background-color: $color-white;
-	font-family: 'Varela Round', sans-serif;
+	font-family: 'Krub', sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 14px;
+	font-size: 16px;
 	overflow-x: hidden;
 }
 
@@ -94,4 +94,9 @@ li {
 input {
 	border-radius: 0;
 	outline: none;
+}
+
+span + span {
+	margin-top: 10px;
+	display: block;
 }

@@ -1,8 +1,9 @@
-.logo {
+.menu__logo {
+	display: block;
 	margin: 0 auto;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url(../assets/images/logo/logo.jpg);
-	width: 200px;
-	height: 100px;
+	background-image: url(../assets/images/logo/logo.png);
+	width: 100px;
+	height: 50px;
 }

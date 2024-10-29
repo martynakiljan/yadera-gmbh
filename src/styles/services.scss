@@ -1,0 +1,21 @@
+.services {
+	position: relative; /* Pozwala na pozycjonowanie pseudo-elementu */
+}
+
+.services::before {
+	content: ''; /* Wymagana zawartość dla pseudo-elementu */
+	position: absolute; /* Umożliwia swobodne pozycjonowanie */
+	top: -50px; /* Ustawienie powyżej kontenera */
+	left: 0; /* Rozpoczyna od lewej krawędzi */
+	right: 0; /* Rozciąga się do prawej krawędzi */
+	height: 100px; /* Wysokość skosu */
+	background-color: white; /* Dziedziczy kolor tła z .services */
+	transform: skewY(-4deg); /* Skos w osi Y o -4 stopnie */
+	z-index: 0; /* Ustawienie za zawartością */
+}
+
+.services-content {
+	position: relative; /* Umożliwia normalne pozycjonowanie zawartości */
+	padding: 20px; /* Margines wewnętrzny */
+	z-index: 1; /* Ustawienie nad pseudo-elementem */
+}
