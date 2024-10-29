@@ -1,0 +1,22 @@
+.slider {
+	overflow: hidden;
+	width: 100vw;
+	position: relative;
+}
+
+.slider__inner {
+	display: flex;
+	width: calc(295px * 17 * 2);
+}
+
+.slider__item {
+	width: 295px;
+	flex-shrink: 0;
+	padding: 0 20px;
+}
+
+.slider__item img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}

@@ -9,6 +9,7 @@ import Story from './components/Story'
 import BigImage from './components/BigImage'
 import Projects from './components/Projects'
 import Services from './components/Services'
+import Slider from './components/Slider'
 import './styles/all.scss'
 import image1 from './assets/images/images/image4.jpeg'
 
@@ -23,6 +24,7 @@ function App() {
 			<BigImage img={image1} />
 			<Services />
 			<Projects />
+			<Slider />
 		</div>
 	)
 }
