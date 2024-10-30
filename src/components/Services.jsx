@@ -1,5 +1,5 @@
 import Title from './Title'
-import AccordionComponent from './AccordionComponent'
+import Accordion from './Accordion'
 const Services = () => {
 	return (
 		<div className='about' id='about'>
@@ -10,7 +10,7 @@ const Services = () => {
 					</div>
 					<div className='section-col section-col__right'>
 						<div className='services'>
-							<AccordionComponent />
+							<Accordion />
 						</div>
 					</div>
 				</div>

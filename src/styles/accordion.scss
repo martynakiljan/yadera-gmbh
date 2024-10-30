@@ -14,6 +14,14 @@
 	font-weight: bold;
 	transition: background-color 0.2s;
 	text-transform: uppercase;
+	align-items: center;
+}
+
+.accordion-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 }
 
 .accordion-body {
@@ -26,8 +34,8 @@
 	margin-left: auto;
 	transition: transform 0.2s;
 	color: $color-red;
-	height: 30px;
-	width: 30px;
+	height: 40px;
+	width: 40px;
 	border: 1px solid $color-red;
 	border-radius: 50%;
 	position: relative;
