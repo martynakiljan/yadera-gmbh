@@ -14,6 +14,7 @@ import Footer from './components/Footer'
 import Reviews from './components/Reviews'
 import './styles/all.scss'
 import image1 from './assets/images/images/image4.jpeg'
+import Contact from './components/Contact'
 
 function App() {
 	return (
@@ -28,6 +29,7 @@ function App() {
 			<Projects />
 			<Slider />
 			<Reviews />
+			<Contact />
 			<Footer />
 		</div>
 	)
