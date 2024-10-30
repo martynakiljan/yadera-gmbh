@@ -1,9 +1,10 @@
 .contact-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	gap: 20px;
+	@include content-width();
 }
 
 form {
@@ -14,22 +15,17 @@ form {
 
 .contact-form,
 .contact-info {
-	flex: 1;
-
-	box-sizing: border-box;
-
-	@include md-min {
-		margin: 0 10px;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 .contact-form {
-	width: 100%;
+	width: 60%;
+}
 
-	@include md-min {
-		max-width: 800px;
-		margin: 0 auto;
-	}
+.contact-info {
+	width: 30%;
 }
 
 .contact-form__title {
@@ -44,7 +40,6 @@ form {
 
 .form-group {
 	margin-bottom: 15px;
-	background-color: $color-bg;
 	border: none;
 }
 
@@ -57,10 +52,10 @@ form {
 .form-group textarea {
 	width: 100%;
 	padding: 10px 0;
-	font-family: 'Poppins', sans-serif;
+
 	box-sizing: border-box;
 	border: none;
-	background-color: $color-bg;
+
 	border-bottom: 1px solid $color-main;
 	color: #8b8b8b;
 
@@ -99,10 +94,6 @@ button {
 	margin-top: 0;
 }
 
-.contact-info p {
-	margin: 10px 0;
-}
-
 .social-contact {
 	width: 30%;
 	margin-top: 30px;
@@ -113,20 +104,18 @@ button {
 	flex-direction: column;
 	justify-content: space-between;
 	flex-wrap: wrap;
-
-	@include md-min {
-		margin-top: 50px;
-		flex-direction: row;
-		max-width: 800px;
-		margin: 0 auto;
-		margin-top: 100px;
-	}
+	gap: 30px;
 }
 
+.contact__col {
+	display: flex;
+	gap: 20px;
+}
 .contact__title {
-	padding-bottom: 20px;
 	font-size: 18px;
 	letter-spacing: 3px;
+	font-weight: 500;
+	padding-bottom: 10px;
 }
 
 .contact__tel,

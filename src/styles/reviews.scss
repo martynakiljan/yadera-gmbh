@@ -1,7 +1,7 @@
 .reviews-slider {
 	position: relative;
 	width: 100%;
-	margin: 0 auto;
+	margin: 100px auto;
 	overflow: hidden;
 
 	@include lg-min {
@@ -41,7 +41,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .review__text {
@@ -71,4 +71,12 @@
 	cursor: pointer;
 	padding: 10px 20px;
 	margin: 0 10px;
+}
+
+.review-image {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	object-fit: cover;
 }

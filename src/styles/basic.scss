@@ -90,11 +90,37 @@ input {
 	outline: none;
 }
 
-span + span {
-	margin-top: 10px;
-	display: block;
-}
-
 .title {
 	margin-bottom: 30px;
+}
+
+.list-item {
+	list-style: disc;
+	margin-left: 15px;
+
+	& + .list-item {
+		margin-top: 5px;
+	}
+}
+
+.sub-list-item {
+	list-style: disc;
+	margin-left: 35px;
+}
+
+.sub-sub-list-item {
+	margin-left: 45px;
+	list-style: disc;
+}
+
+.title-center {
+	margin: 0 auto;
+	margin: 50px 0;
+	text-align: center;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }

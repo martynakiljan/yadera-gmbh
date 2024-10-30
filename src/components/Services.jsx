@@ -6,7 +6,7 @@ const Services = () => {
 			<div className='about'>
 				<div className='section'>
 					<div className='section-col section-col__left'>
-						<Title text='was machen wir?' />
+						<Title text='was machen wir eigentlich?' />
 					</div>
 					<div className='section-col section-col__right'>
 						<div className='services'>

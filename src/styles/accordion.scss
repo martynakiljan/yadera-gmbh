@@ -8,7 +8,7 @@
 .accordion-header {
 	display: flex;
 	justify-content: space-between;
-	padding: 15px;
+	padding: 0;
 	cursor: pointer;
 	font-size: 22px;
 	font-weight: bold;
@@ -55,4 +55,9 @@
 	to {
 		opacity: 1;
 	}
+}
+
+.list-title {
+	margin-bottom: 10px;
+	font-weight: bold;
 }

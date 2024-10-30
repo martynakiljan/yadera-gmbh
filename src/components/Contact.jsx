@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-
+import Title from './Title'
 import ClipLoader from 'react-spinners/ClipLoader'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
 	const {
@@ -28,66 +30,86 @@ const Contact = () => {
 	}
 
 	return (
-		<div className='contact-container reduced-width' id='contact'>
-			<div className='contact-form '>
-				<h2 className='contact-form__title title-section'>-Contact me-</h2>
-				{isSubmitted ? (
-					<p className='thank-you-message'>Thank you. We will contact you soon!</p>
-				) : (
-					<form onSubmit={handleSubmit(onSubmit)}>
-						<div className='form-group'>
-							<label htmlFor='name'>Your Name</label>
-							<input id='name' type='text' placeholder='Kate' {...register('name', { required: 'Name is required' })} />
-							{errors.name && <p className='error-message'>{errors.name.message}</p>}
-						</div>
-
-						<div className='form-group'>
-							<label htmlFor='email'>Email</label>
-							<input
-								id='email'
-								type='email'
-								placeholder='kate345@gmail.com'
-								{...register('email', { required: 'Email is required' })}
-							/>
-							{errors.email && <p className='error-message'>{errors.email.message}</p>}
-						</div>
-						<div className='form-group'>
-							<label htmlFor='message'>Message</label>
-							<textarea
-								id='message'
-								placeholder='I am interested in a high altitude course with my husband. Can I ask for more information?'
-								{...register('message', { required: 'Message is required' })}></textarea>
-							{errors.message && <p className='error-message'>{errors.message.message}</p>}
-						</div>
-						{isSubmitting ? (
-							<ClipLoader color='#242527' size={24} />
-						) : (
-							<button type='submit' disabled={isSubmitting}>
-								Send this message!
-							</button>
-						)}
-					</form>
-				)}
+		<>
+			<div className='title-center'>
+				<Title text='wollen wir reden?' />
 			</div>
+			<div className='contact-container reduced-width' id='contact'>
+				<div className='contact-col contact-form '>
+					{isSubmitted ? (
+						<p className='thank-you-message'>Danke. Wir werden Sie bald kontaktieren!</p>
+					) : (
+						<form onSubmit={handleSubmit(onSubmit)}>
+							<div className='form-group'>
+								<label htmlFor='name'>Ihr Name</label>
+								<input
+									id='name'
+									type='text'
+									placeholder='Kate'
+									{...register('name', { required: 'Name ist erforderlich' })}
+								/>
+								{errors.name && <p className='error-message'>{errors.name.message}</p>}
+							</div>
 
-			<div>
-				<div className='contact__bottom'>
-					<div className='contact__col'>
-						<p className='contact__title '>Contact</p>
-						<p className='contact__tel'>+41 546 345 345</p>
-						<a className='contact__email' href='mailto:tom@your-guide.com'>
-							tom@your-guide.com
-						</a>
+							<div className='form-group'>
+								<label htmlFor='email'>E-Mail</label>
+								<input
+									id='email'
+									type='email'
+									placeholder='kate345@gmail.com'
+									{...register('email', { required: 'E-Mail ist erforderlich' })}
+								/>
+								{errors.email && <p className='error-message'>{errors.email.message}</p>}
+							</div>
+							<div className='form-group'>
+								<label htmlFor='message'>Nachricht</label>
+								<textarea
+									id='message'
+									placeholder='
+					   Ich möchte meine Wohnung streichen. Bitte kontaktieren Sie mich.'
+									{...register('message', { required: 'Nachricht ist erforderlich' })}></textarea>
+								{errors.message && <p className='error-message'>{errors.message.message}</p>}
+							</div>
+							{isSubmitting ? (
+								<ClipLoader color='#242527' size={24} />
+							) : (
+								<button type='submit' disabled={isSubmitting}>
+									Nachricht senden!
+								</button>
+							)}
+						</form>
+					)}
+				</div>
+
+				<div className='contact-col contact-info'>
+					<div className='contact__bottom'>
+						<div className='contact__col'>
+							<div>
+								<FontAwesomeIcon icon={faPhone} />
+							</div>
+							<div>
+								{' '}
+								<p className='contact__title '>Kontakt</p>
+								<p className='contact__tel'>+41 79 133 29 29</p>
+								<a className='contact__email' href='mailto:info@yadera.ch'>
+									info@yadera.ch
+								</a>
+							</div>
+						</div>
+						<div className='contact__col'>
+							<div>
+								<FontAwesomeIcon icon={faLocationDot} />
+							</div>
+							<div>
+								<p className='contact__title'>Standort</p>
+								<p className='contact__street'>Dorfstrasse 11a</p>
+								<p className='contact__city'>8603 Schwerzenbach</p>
+							</div>
+						</div>
 					</div>
-					<div className='contact__col'>
-						<p className='contact__title'>Location</p>
-						<p className='contact__street'>wherever you want!</p>
-						<p className='contact__city'>every mountain.</p>
-					</div>
-					<div className='contact__col'></div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

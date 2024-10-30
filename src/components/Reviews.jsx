@@ -45,6 +45,8 @@ const Reviews = () => {
 			<div className='review__inner'>
 				{visibleReviews.map((review, index) => (
 					<div key={index} className='review'>
+						<img className='review-image' src={review.src} alt='person' />
+
 						<p className='review__text'>{review.text}</p>
 						<p className='review__name'>{review.name}</p>
 					</div>

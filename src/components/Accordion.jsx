@@ -16,33 +16,67 @@ const Accordion = () => {
 				imageClass='service-image-1'
 				isActive={activeKey === '0'}
 				onClick={() => handleToggle('0')}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-				laborum.
+				<p className='list-title'>Das Leistungsspektrum der Malerarbeiten:</p>
+
+				<ul className='list'>
+					<li className='list-item'>Innere & Äussere Malerarbeiten</li>
+					<li className='list-item'>Schimmel Sanierungen</li>
+					<li className='list-item'>Spritzarbeiten</li>
+					<li className='list-item'>Tapezierarbeiten</li>
+					<li className='list-item'>Strassenmarkierungen</li>
+					<li className='list-item'>Dekorative Arbeiten</li>
+					<li className='list-item'>Fassadenreinigungen</li>
+				</ul>
 			</AccordionItem>
 			<AccordionItem
-				title='Fassadensysteme'
-				imageClass='service-image-2'
+				title='Hinterlüftete Fassadensysteme'
+				imageClass='service-image-3'
 				isActive={activeKey === '1'}
 				onClick={() => handleToggle('1')}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-				laborum.
+				<p className='list-title'>Das Leistungsspektrum der Verputzten Aussenwärmedämmung: ​</p>
+				<ul className='list'>
+					<li className='list-item'>Dämmen von Fassaden, Keller Decken und Garagen</li>
+					<li className='list-item'>Perimeterdämmungen / Sockeldämmungen</li>
+					<li className='list-item'>Verputzen von Fassaden</li>
+					<li className='list-item'>Sockel Sanierungen</li>
+					<li className='list-item'>Riss Sanierungen</li>
+				</ul>
 			</AccordionItem>
 			<AccordionItem
 				title='Verputzte Aussenwärmedämmung'
-				imageClass='service-image-3'
+				imageClass='service-image-2'
 				isActive={activeKey === '2'}
 				onClick={() => handleToggle('2')}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-				laborum.
+				<p className='list-title'>
+					Profitieren Sie von unseren Erfahrungen bei der Umsetzung von hinterlüfteten so wie vorgehängten Fassaden
+					Systemen
+				</p>
+				<ul className='list'>
+					<ul className='sub-list'>
+						<p> Montage Arbeiten im HF-Bereich:</p>
+						<li className='sub-list-item'>Unterkonstruktionen Alu / Holz</li>
+						<li className='sub-list-item'>Unterkonstruktionen Alu / Alu</li>
+						<li className='sub-list-item'>Dämmung Mineral oder Steinwolle</li>
+						<li className='sub-list-item'>Fensterbänke / Zargen Montage</li>
+						<li className='sub-list-item'>Dachrandabdeckungen / Mauerkronenabdeckungen</li>
+
+						<p> Montage verschiedenster Bekleidungen:</p>
+						<li className='sub-list-item'>Eternit</li>
+						<li className='sub-list-item'>Naturschiefer</li>
+						<li className='sub-list-item'>Alucobond</li>
+						<li className='sub-list-item'>Wellblech/gelochtes Wellblech</li>
+						<li className='sub-list-item'>Flachblech</li>
+						<li className='sub-list-item'>Fundermax-Platten Exterior</li>
+						<li className='sub-list-item'>Künstlicher Rasenteppich</li>
+						<li className='sub-list-item'>Trespa Meteon</li>
+						<li className='sub-list-item'>Slimtech</li>
+						<li className='sub-list-item'>Lisenen</li>
+						<li className='sub-list-item'>Stahlblech</li>
+						<li className='sub-list-item'>Montana Sandwich Panele</li>
+						<li className='sub-list-item'>Putzträgerplatten</li>
+						<li className='sub-list-item'>etc.</li>
+					</ul>
+				</ul>
 			</AccordionItem>
 		</div>
 	)

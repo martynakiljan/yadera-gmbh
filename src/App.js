@@ -13,9 +13,9 @@ import Slider from './components/Slider'
 import Footer from './components/Footer'
 import Reviews from './components/Reviews'
 import './styles/all.scss'
-import image1 from './assets/images/images/image4.jpeg'
+import image1 from './assets/images/images/image5.jpeg'
 import Contact from './components/Contact'
-
+import Info from './components/Info'
 function App() {
 	return (
 		<div className='app'>
@@ -25,6 +25,7 @@ function App() {
 			<Story />
 			<About />
 			<BigImage img={image1} />
+			<Info />
 			<Services />
 			<Projects />
 			<Slider />
