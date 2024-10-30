@@ -43,7 +43,7 @@ function Menu() {
 							</a>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link' href='contact'>
+							<a className='menu__link menu__link--contact' href='contact'>
 								kontakt
 							</a>
 						</li>

@@ -1,5 +1,5 @@
 import Title from './Title'
-import Images from './Images'
+
 const About = () => {
 	return (
 		<div className='about' id='about'>

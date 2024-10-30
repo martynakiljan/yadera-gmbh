@@ -11,7 +11,7 @@ import Projects from './components/Projects'
 import Services from './components/Services'
 import Slider from './components/Slider'
 import Footer from './components/Footer'
-
+import Reviews from './components/Reviews'
 import './styles/all.scss'
 import image1 from './assets/images/images/image4.jpeg'
 
@@ -27,6 +27,7 @@ function App() {
 			<Services />
 			<Projects />
 			<Slider />
+			<Reviews />
 			<Footer />
 		</div>
 	)
