@@ -1,10 +1,25 @@
 .menu {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: 111;
 	border-bottom: 1px solid $color-white;
 	width: 100%;
 	padding: 10px 0;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	&.scrolled {
+		background-color: #f1f1f1;
+		opacity: 0.8;
+		border-color: rgba(0, 0, 0, 0.1);
+
+		.menu__link {
+			color: black;
+		}
+
+		.hamburger-react {
+			color: black;
+		}
+	}
 }
 
 .menu__inner {
@@ -12,6 +27,20 @@
 	justify-content: space-between;
 	align-items: center;
 	@include content-width();
+}
+
+.menu__logo {
+	transition: width 0.1s ease, height 0.1s ease;
+
+	&--large {
+		width: 150px;
+		height: 70px;
+	}
+
+	&--small {
+		width: 100px;
+		height: 50px;
+	}
 }
 
 .menu__list {
@@ -30,7 +59,7 @@
 	transform: translateY(-10px);
 	visibility: hidden;
 	transition: opacity 0.3s ease, transform 0.3s ease;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* delikatny cień */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu__list.open {
@@ -51,6 +80,7 @@
 	display: block;
 	letter-spacing: 1px;
 	color: $color-white;
+	transition: color 0.3s ease;
 
 	.open & {
 		color: black;
@@ -63,6 +93,7 @@
 
 .menu__link--contact {
 	padding: 10px;
+
 	span {
 		padding: 5px;
 	}

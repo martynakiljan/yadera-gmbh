@@ -31,6 +31,7 @@ function App() {
 			<Slider />
 			<Reviews />
 			<Contact />
+			<DiagonalComponent isRed />
 			<Footer />
 		</div>
 	)

@@ -103,6 +103,14 @@ input {
 	}
 }
 
+.list-subtitle {
+	padding-bottom: 5px;
+
+	&:nth-of-type(2) {
+		padding-top: 5px;
+	}
+}
+
 .sub-list-item {
 	list-style: disc;
 	margin-left: 35px;

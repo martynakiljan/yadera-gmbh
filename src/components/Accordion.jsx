@@ -53,14 +53,14 @@ const Accordion = () => {
 				</p>
 				<ul className='list'>
 					<ul className='sub-list'>
-						<p> Montage Arbeiten im HF-Bereich:</p>
+						<p className='list-subtitle'> Montage Arbeiten im HF-Bereich:</p>
 						<li className='sub-list-item'>Unterkonstruktionen Alu / Holz</li>
 						<li className='sub-list-item'>Unterkonstruktionen Alu / Alu</li>
 						<li className='sub-list-item'>Dämmung Mineral oder Steinwolle</li>
 						<li className='sub-list-item'>Fensterbänke / Zargen Montage</li>
 						<li className='sub-list-item'>Dachrandabdeckungen / Mauerkronenabdeckungen</li>
 
-						<p> Montage verschiedenster Bekleidungen:</p>
+						<p className='list-subtitle'> Montage verschiedenster Bekleidungen:</p>
 						<li className='sub-list-item'>Eternit</li>
 						<li className='sub-list-item'>Naturschiefer</li>
 						<li className='sub-list-item'>Alucobond</li>

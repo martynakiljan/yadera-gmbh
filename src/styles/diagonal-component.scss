@@ -13,3 +13,11 @@
 		z-index: 0;
 	}
 }
+
+.diagonal-component--red {
+	margin-top: 100px;
+	z-index: -1;
+	&::before {
+		background-color: $color-red;
+	}
+}
