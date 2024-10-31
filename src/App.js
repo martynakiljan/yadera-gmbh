@@ -30,8 +30,8 @@ function App() {
 			<Projects />
 			<Slider />
 			<Reviews />
+			<BigImage img={image1} />
 			<Contact />
-			<DiagonalComponent isRed />
 			<Footer />
 		</div>
 	)

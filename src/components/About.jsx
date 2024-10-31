@@ -1,4 +1,5 @@
 import Title from './Title'
+import Link from './Link'
 
 const About = () => {
 	return (
@@ -23,6 +24,7 @@ const About = () => {
 								arbeiten zuverlässig, zügig und effizient. Die Qualität ist unsere Visitenkarte, das erachten wir als
 								Selbstverständlichkeit. Wir übernehmen Verantwortung in Bezug auf Termin, Qualität und Preis.
 							</span>
+						    <Link />
 						</p>
 					</div>
 				</div>

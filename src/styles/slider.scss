@@ -12,7 +12,8 @@
 .slider__item {
 	width: 295px;
 	flex-shrink: 0;
-	padding: 0 20px;
+	margin: 0 40px;
+	max-height: 340px;
 }
 
 .slider__item img {

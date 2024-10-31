@@ -13,8 +13,6 @@ import slider11 from '../assets/images/slider/slider11.jpeg'
 import slider12 from '../assets/images/slider/slider12.jpeg'
 import slider13 from '../assets/images/slider/slider13.jpeg'
 import slider14 from '../assets/images/slider/slider14.jpeg'
-import slider15 from '../assets/images/slider/slider15.jpeg'
-import slider16 from '../assets/images/slider/slider16.jpeg'
 import slider17 from '../assets/images/slider/slider17.jpeg'
 
 const images = [
@@ -32,8 +30,6 @@ const images = [
 	slider12,
 	slider13,
 	slider14,
-	slider15,
-	slider16,
 	slider17,
 ]
 
@@ -45,7 +41,7 @@ const Slider = () => {
 		let start = 0
 
 		const animate = () => {
-			start -= 2 // Prędkość przesuwania - możesz zmienić na -3, aby jeszcze bardziej przyspieszyć
+			start -= 1 
 			if (start <= -slider.offsetWidth / 2) {
 				start = 0
 			}
