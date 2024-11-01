@@ -3,7 +3,6 @@ import React from 'react'
 import './App.css'
 import Menu from './components/Menu'
 import Header from './components/Header'
-import DiagonalComponent from './components/DiagonalComponent'
 import About from './components/About'
 import Story from './components/Story'
 import BigImage from './components/BigImage'
@@ -14,26 +13,36 @@ import Footer from './components/Footer'
 import Reviews from './components/Reviews'
 import './styles/all.scss'
 import image1 from './assets/images/images/image5.jpeg'
+import image4 from './assets/images/images/image4.jpeg'
+import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
 import Info from './components/Info'
+import Twoimages from './components/TwoImages'
+
 function App() {
+	const { scrollYProgress } = useScroll()
+
 	return (
-		<div className='app'>
-			<Header />
-			<Menu />
-			<DiagonalComponent />
-			<Story />
-			<About />
-			<BigImage img={image1} />
-			<Info />
-			<Services />
-			<Projects />
-			<Slider />
-			<Reviews />
-			<BigImage img={image1} />
-			<Contact />
-			<Footer />
-		</div>
+		<>
+			<motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
+			<div className='app'>
+				<Header />
+				<Menu />
+				{/* //
+			<DiagonalComponent /> */}
+				<Story />
+				<About />
+				<BigImage img={image1} />
+				<Info />
+				<Services />
+				<Projects />
+				<Slider />
+				<Reviews />
+				<Twoimages />
+				<Contact />
+				<Footer />
+			</div>
+		</>
 	)
 }
 

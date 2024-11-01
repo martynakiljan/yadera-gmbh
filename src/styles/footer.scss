@@ -33,11 +33,12 @@
 	justify-content: space-between;
 	margin: 0 auto;
 	@include content-width();
-	padding: 50px 0 !important;
+	padding: 40px !important;
 }
 
 .menu__list-footer {
 	text-transform: uppercase;
+
 	.menu__li {
 		text-align: left;
 		padding: 5px 0;

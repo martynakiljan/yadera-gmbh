@@ -27,17 +27,20 @@
 
 .review__inner {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	transition: transform 0.5s ease;
+	background-color: #e9d6d7;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .review {
-	width: 400px;
+	width: 600px;
 	box-sizing: border-box;
 	padding: 20px;
 	border: 1px solid #ddd;
 	margin: 0 10px;
-	height: 400px;
+	height: 200;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -45,14 +48,14 @@
 }
 
 .review__text {
-	font-size: 1rem;
-	margin-bottom: 10px;
+	font-size: 12px;
 	text-align: center;
+	padding: 8px 0;
 }
 
 .review__name {
 	font-weight: bold;
-	font-size: 0.9rem;
+	font-size: 10px;
 	color: #555;
 	text-transform: uppercase;
 }
@@ -65,7 +68,7 @@
 
 .slider__button {
 	border: none;
-	color: $color-red;
+	color: $color-main;
 	background-color: transparent;
 	font-size: 1.5rem;
 	cursor: pointer;
@@ -74,8 +77,8 @@
 }
 
 .review-image {
-	width: 100px;
-	height: 100px;
+	width: 70px;
+	height: 70px;
 	margin: 0 auto;
 	border-radius: 50%;
 	object-fit: cover;

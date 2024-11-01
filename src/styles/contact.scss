@@ -83,13 +83,14 @@ form {
 }
 
 button {
-	padding: 10px 50px;
+	padding: 10px 20px;
 	color: $color-main;
 	background-color: transparent;
 	cursor: pointer;
 	font-weight: 400;
 	margin-top: 20px;
 	border: 1px solid $color-main;
+	text-transform: uppercase;
 }
 
 .contact-info h2 {

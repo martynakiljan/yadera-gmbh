@@ -27,7 +27,26 @@
 }
 
 .big-image {
-	height: 70vh;
-	width: 100vw;
-	object-fit: cover;
+	height: 100vh; /* Wysokość tła */
+	width: 100vw; /* Szerokość tła */
+	background-size: cover; /* Dostosowanie obrazu do rozmiaru kontenera */
+	background-position: center; /* Wyśrodkowanie obrazu */
+	background-attachment: fixed; /* Ustawienie tła na stałe */
 }
+
+.images {
+	position: relative; /* Ensure images are positioned correctly */
+}
+
+.image {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transform: scale(0.8); /* Start slightly smaller */
+	transition: transform 0.4s ease-out; /* Animation for scaling */
+}
+
+.image--visible {
+	transform: scale(1); /* Scale to original size */
+}
+

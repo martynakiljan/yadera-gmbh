@@ -13,12 +13,9 @@ function Menu() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 50) {
-				setScrolled(true)
-			} else {
-				setScrolled(false)
-			}
+			setScrolled(window.scrollY > 50)
 		}
+
 		window.addEventListener('scroll', handleScroll)
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
@@ -29,7 +26,7 @@ function Menu() {
 		<div className={`menu ${scrolled ? 'scrolled' : ''}`}>
 			<div className='menu__inner'>
 				<div className='menu__logo-wrapper'>
-					<a className={`menu__logo ${scrolled ? 'menu__logo--small' : 'menu__logo--large'}`}></a>
+					<a className='menu__logo'></a> {/* Usunięto klasy zmieniające rozmiar */}
 				</div>
 				<div className={`menu__hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
 					<Hamburger toggled={isOpen} toggle={setIsOpen} />
@@ -68,7 +65,7 @@ function Menu() {
 						<span>
 							<FontAwesomeIcon icon={faMobile} />
 						</span>{' '}
-						<span>Kontakt</span>
+						<span>+41 79 133 29 29</span>
 					</a>
 				</div>
 			</div>

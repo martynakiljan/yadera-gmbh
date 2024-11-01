@@ -7,11 +7,11 @@ import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 const Reviews = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 
-	// Automatyczne przesuwanie slidera co 3 sekundy
+	// Automatyczne przesuwanie slidera co 6 sekund
 	useEffect(() => {
 		const interval = setInterval(() => {
 			handleNext()
-		}, 6000) // 3000 ms = 3s
+		}, 6000) // 6000 ms = 6s
 
 		return () => clearInterval(interval)
 	}, [currentIndex])
@@ -26,32 +26,21 @@ const Reviews = () => {
 		setCurrentIndex(prevIndex => (prevIndex - 1 + reviewsData.length) % reviewsData.length)
 	}
 
-	// Wybieramy trzy widoczne recenzje
-	const visibleReviews = [
-		reviewsData[currentIndex],
-		reviewsData[(currentIndex + 1) % reviewsData.length],
-		reviewsData[(currentIndex + 2) % reviewsData.length],
-	]
-
 	return (
 		<div className='reviews-slider'>
 			<div className='review-title'>
-				<span className='review-icon'>
-					<FontAwesomeIcon icon={faQuoteLeft} />
-				</span>{' '}
 				<Title text='Was sagen Kunden über uns?' />
 			</div>
 
 			<div className='review__inner'>
-				{visibleReviews.map((review, index) => (
-					<div key={index} className='review'>
-						<img className='review-image' src={review.src} alt='person' />
-
-						<p className='review__text'>{review.text}</p>
-						<p className='review__name'>{review.name}</p>
-					</div>
-				))}
+				{/* Render only the current review */}
+				<div className='review'>
+					<img className='review-image' src={reviewsData[currentIndex].src} alt='person' />
+					<p className='review__text'>{reviewsData[currentIndex].text}</p>
+					<p className='review__name'>{reviewsData[currentIndex].name}</p>
+				</div>
 			</div>
+
 			<div className='slider__controls'>
 				<button onClick={handlePrev} className='slider__button slider__button--prev'>
 					&#8592; {/* Strzałka w lewo */}
