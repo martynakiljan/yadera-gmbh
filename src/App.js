@@ -18,6 +18,7 @@ import { motion, useScroll } from 'framer-motion'
 import Contact from './components/Contact'
 import Info from './components/Info'
 import Twoimages from './components/TwoImages'
+import ReviewsTest from './components/ReviewsTest'
 
 function App() {
 	const { scrollYProgress } = useScroll()
@@ -37,7 +38,7 @@ function App() {
 				<Services />
 				<Projects />
 				<Slider />
-				<Reviews />
+				<ReviewsTest />
 				<Twoimages />
 				<Contact />
 				<Footer />
