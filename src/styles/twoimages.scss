@@ -24,19 +24,19 @@
 }
 
 .twoimages {
-	position: relative; /* Ensure images are positioned correctly */
+	position: relative;
 }
 
 .twoimages__img {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	transform: scale(0.8); /* Start slightly smaller */
-	transition: transform 0.4s ease-out; /* Animation for scaling */
+	transform: scale(0.8); 
+	transition: transform 0.4s ease-out; 
 }
 
 .twoimages__img--visible {
-	transform: scale(1); /* Scale to original size when visible */
+	transform: scale(1); 
 }
 
-/* Optional: Additional styles for twoimages__inner or container */
+

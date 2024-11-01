@@ -9,24 +9,21 @@ const Header = () => {
 		offset: ['start start', 'end start'],
 	})
 
-	const sizing = useTransform(scrollYProgress, [0, 1], ['100%', '125%'])
-	const translate = useTransform(scrollYProgress, [0, 1], ['0px', '-175px'])
-	const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) // Adjust opacity based on scroll
+	const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25])
+	const translateY = useTransform(scrollYProgress, [0, 1], ['0px', '-175px'])
+	const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
 	return (
-		<div className='header'>
+		<div className='header' id='home'>
 			<div className='header__inner' ref={ref}>
 				<motion.div
 					style={{
-						backgroundSize: sizing,
-						backgroundPositionX: translate,
+						scale,
+						y: translateY,
 					}}
 					className='header__image'>
-					<motion.div
-						className='header__title'
-						style={{ opacity }} // Apply opacity to title
-					>
-						<h1 className='header__text'>Das Faddaden und Maller Team.</h1>
+					<motion.div className='header__title' style={{ opacity }}>
+						<h1 className='header__text'>Das Fassaden und Maller Team.</h1>
 					</motion.div>
 				</motion.div>
 			</div>

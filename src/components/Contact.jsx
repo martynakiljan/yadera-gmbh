@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Title from './Title'
 import ClipLoader from 'react-spinners/ClipLoader'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
 	const {
@@ -31,9 +29,9 @@ const Contact = () => {
 
 	return (
 		<>
-			<div className='section'>
+			<div className='section' id='contact'>
 				<div className='section-col section-col__left'>
-					<Title text='wollen wir reden?' />
+					<Title text='sollen wir reden?' />
 				</div>
 				<div className='section-col section-col__right'>
 					<div className='contact-form '>

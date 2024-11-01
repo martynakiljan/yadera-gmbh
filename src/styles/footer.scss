@@ -30,17 +30,30 @@
 
 .footer__inner {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	justify-content: center;
 	margin: 0 auto;
 	@include content-width();
 	padding: 40px !important;
+	gap: 20px;
+
+	@include md-min {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
 
 .menu__list-footer {
 	text-transform: uppercase;
 
 	.menu__li {
-		text-align: left;
+		text-align: center;
+
+		@include md-min {
+			text-align: left;
+		}
+
 		padding: 5px 0;
 	}
 
@@ -51,7 +64,15 @@
 
 .footer__col {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	gap: 10px;
+	align-items: center;
+
+	@include md-min {
+		align-items: flex-start;
+		flex-direction: row;
+	}
 }
 
 .footer-copy {

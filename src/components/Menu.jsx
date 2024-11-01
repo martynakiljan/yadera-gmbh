@@ -11,6 +11,10 @@ function Menu() {
 		setIsOpen(!isOpen)
 	}
 
+	const closeMenu = () => {
+		setIsOpen(false)
+	}
+
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 50)
@@ -26,7 +30,7 @@ function Menu() {
 		<div className={`menu ${scrolled ? 'scrolled' : ''}`}>
 			<div className='menu__inner'>
 				<div className='menu__logo-wrapper'>
-					<a className='menu__logo'></a> {/* Usunięto klasy zmieniające rozmiar */}
+					<a className='menu__logo'></a>
 				</div>
 				<div className={`menu__hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
 					<Hamburger toggled={isOpen} toggle={setIsOpen} />
@@ -34,33 +38,33 @@ function Menu() {
 				{isOpen && (
 					<ul className={`menu__list ${isOpen ? 'open' : ''}`}>
 						<li className='menu__li'>
-							<a className='menu__link' href='#home'>
+							<a className='menu__link' href='#home' onClick={closeMenu}>
 								home
 							</a>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link' href='#about'>
+							<a className='menu__link' href='#about' onClick={closeMenu}>
 								über uns
 							</a>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link' href='#services'>
+							<a className='menu__link' href='#services' onClick={closeMenu}>
 								dienstleistungen
 							</a>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link' href='#projects'>
+							<a className='menu__link' href='#projects' onClick={closeMenu}>
 								projekte
 							</a>
 						</li>
 						<li className='menu__li'>
-							<a className='menu__link menu__link--contact' href='#contact'>
+							<a className='menu__link menu__link--contact' href='#contact' onClick={closeMenu}>
 								kontakt
 							</a>
 						</li>
 					</ul>
 				)}
-				<div>
+				<div className='menu-contact'>
 					<a className='menu__link menu__link--contact'>
 						<span>
 							<FontAwesomeIcon icon={faMobile} />

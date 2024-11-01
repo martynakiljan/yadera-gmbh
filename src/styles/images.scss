@@ -1,13 +1,23 @@
-.images__inner {
-	display: flex;
-	gap: 15px;
-	justify-content: space-between;
+.images {
+	position: relative;
 }
 
 .image {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	transform: scale(0.8);
+	transition: transform 0.4s ease-out;
+}
+
+.image--visible {
+	transform: scale(1);
+}
+
+.images__inner {
+	display: flex;
+	gap: 15px;
+	justify-content: space-between;
 }
 
 .image_1 {
@@ -27,26 +37,14 @@
 }
 
 .big-image {
-	height: 100vh; /* Wysokość tła */
-	width: 100vw; /* Szerokość tła */
-	background-size: cover; /* Dostosowanie obrazu do rozmiaru kontenera */
-	background-position: center; /* Wyśrodkowanie obrazu */
-	background-attachment: fixed; /* Ustawienie tła na stałe */
-}
-
-.images {
-	position: relative; /* Ensure images are positioned correctly */
-}
-
-.image {
-	background-repeat: no-repeat;
-	background-position: center;
+	height: 50vh;
+	width: 100vw;
 	background-size: cover;
-	transform: scale(0.8); /* Start slightly smaller */
-	transition: transform 0.4s ease-out; /* Animation for scaling */
-}
+	background-position: center;
+	background-attachment: fixed;
 
-.image--visible {
-	transform: scale(1); /* Scale to original size */
+	@include md-min {
+		height: 100vh;
+	}
 }
 

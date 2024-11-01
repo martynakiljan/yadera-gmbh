@@ -8,6 +8,7 @@
 	width: 100vw;
 	position: relative;
 	top: 0;
+	background-position: center;
 
 	&::before {
 		content: '';
@@ -31,9 +32,11 @@
 }
 
 .header__text {
-	font-size: 70px;
+	font-size: 50px;
 	text-align: center;
 	font-weight: 400;
+
+	@include md-min {
+		font-size: 70px;
+	}
 }
-
-

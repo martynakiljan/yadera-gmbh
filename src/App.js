@@ -29,8 +29,6 @@ function App() {
 			<div className='app'>
 				<Header />
 				<Menu />
-				{/* //
-			<DiagonalComponent /> */}
 				<Story />
 				<About />
 				<BigImage img={image1} />

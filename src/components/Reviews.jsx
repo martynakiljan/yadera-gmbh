@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import reviewsData from '../data/reviews'
 import Title from './Title'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Reviews = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 
-	// Automatyczne przesuwanie slidera co 6 sekund
 	useEffect(() => {
 		const interval = setInterval(() => {
 			handleNext()
-		}, 6000) // 6000 ms = 6s
+		}, 6000)
 
 		return () => clearInterval(interval)
 	}, [currentIndex])
 
-	// Funkcja do przechodzenia do następnej recenzji
 	const handleNext = () => {
 		setCurrentIndex(prevIndex => (prevIndex + 1) % reviewsData.length)
 	}
 
-	// Funkcja do przechodzenia do poprzedniej recenzji
 	const handlePrev = () => {
 		setCurrentIndex(prevIndex => (prevIndex - 1 + reviewsData.length) % reviewsData.length)
 	}

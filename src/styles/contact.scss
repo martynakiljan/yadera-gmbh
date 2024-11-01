@@ -21,9 +21,13 @@ form {
 }
 
 .contact-form {
-	width: 80%;
+	width: 100%;
 	margin-right: 0;
 	margin-left: auto;
+
+	@include md-min {
+		width: 80%;
+	}
 }
 
 .contact-info {
@@ -69,7 +73,7 @@ form {
 
 .form-group textarea {
 	height: 150px;
-	resize: vertical; /* Allows vertical resizing */
+	resize: vertical;
 
 	@include md-max {
 		height: 100px;
@@ -112,7 +116,18 @@ button {
 
 .contact__col {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	gap: 20px;
+	text-align: center;
+
+	@include md-min {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+		text-align: left;
+	}
 }
 .contact__title {
 	font-size: 18px;

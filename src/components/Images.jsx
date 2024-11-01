@@ -2,38 +2,37 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const Images = () => {
 	const imageRefs = useRef([])
-	const [isVisible, setIsVisible] = useState(false) // State to track visibility
+	const [visibleImages, setVisibleImages] = useState([])
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			entries => {
-				const visible = entries.some(entry => entry.isIntersecting)
-				if (visible) {
-					setIsVisible(true) // Set visibility to true if any image is visible
-				} else {
-					setIsVisible(false) // Reset visibility when none are visible
-				}
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						setVisibleImages(prev => [...prev, entry.target])
+					}
+				})
 			},
-			{ threshold: 0.2 } // Trigger when 20% of the image is visible
+			{ threshold: 0.2 }
 		)
 
 		imageRefs.current.forEach(image => observer.observe(image))
 
 		return () => {
 			imageRefs.current.forEach(image => observer.unobserve(image)) // Clean up
-			observer.disconnect() // Clean up
+			observer.disconnect()
 		}
 	}, [])
 
 	return (
-		<div className={`images ${isVisible ? 'images--visible' : ''}`}>
-			{' '}
-			{/* Add class based on visibility state */}
+		<div className='images'>
 			<div className='images__inner'>
 				{Array.from({ length: 3 }, (_, index) => (
 					<div
 						key={index}
-						className={`image image_${index + 1} ${isVisible ? 'image--visible' : ''}`} // Apply class to each image
+						className={`image image_${index + 1} ${
+							visibleImages.includes(imageRefs.current[index]) ? 'image--visible' : ''
+						}`}
 						ref={el => (imageRefs.current[index] = el)}></div>
 				))}
 			</div>
