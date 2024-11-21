@@ -1,0 +1,36 @@
+.section {
+	@include content-width();
+
+	margin: 40px 0;
+
+	@include md-min {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		margin: 70px auto;
+		gap: 50px;
+	}
+}
+
+.section-col__left {
+	width: 100%;
+
+	@include md-min {
+		width: 25%;
+
+		.services &,
+		.projects &,
+		.partners & {
+			width: 100%;
+			padding: 70px 0;
+		}
+	}
+}
+
+.section-col__right {
+	width: 100%;
+
+	@include md-min {
+		width: 75%;
+	}
+}

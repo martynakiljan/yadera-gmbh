@@ -1,0 +1,14 @@
+.story__text {
+	margin-bottom: 20px;
+	display: block;
+
+	@include md-min {
+		font-size: 22px;
+	}
+}
+
+.story__text-wrapper {
+	@include md-max {
+		margin-bottom: 20px;
+	}
+}

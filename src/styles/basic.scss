@@ -1,0 +1,135 @@
+@import './mixins';
+@import './variables';
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $color-white;
+	font-family: 'Montserrat', sans-serif;
+
+	font-style: normal;
+	font-size: 16px;
+	color: $color-main;
+}
+
+.app {
+	overflow-x: clip;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	text-size-adjust: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+input {
+	border-radius: 0;
+	outline: none;
+}
+
+.list-item {
+	display: flex;
+}
+
+.list-subtitle {
+	padding-bottom: 10px;
+	font-weight: 500;
+
+	&:nth-of-type(2) {
+		padding-top: 5px;
+	}
+}
+
+.title-center {
+	margin: 0 auto;
+	margin: 50px 0;
+	text-align: center;
+}
+
+a {
+	color: $color-main;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+
+}
+.list-item:before {
+	margin-right: 5px;
+	content: '✓';
+}
+
+.sub-list__col {
+	@include md-max {
+		font-size: 13px;
+	}
+}
+

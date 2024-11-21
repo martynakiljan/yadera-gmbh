@@ -1,0 +1,11 @@
+.about__text {
+	display: block;
+	font-size: 16px;
+	line-height: 1.35;
+	margin-bottom: 20px;
+
+	@include md-min {
+		font-size: 22px;
+	}
+}
+

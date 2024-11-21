@@ -1,0 +1,56 @@
+.slider {
+	overflow: hidden;
+	width: 100vw;
+	position: relative;
+	margin: 100px 0;
+
+	@include md-min {
+		margin: 140px 0;
+	}
+}
+
+.slider-partners {
+	margin: 50px 0;
+	@include md-min {
+		margin: 0;
+	}
+}
+
+.slider__inner {
+	display: flex;
+	width: calc(295px * 17 * 2);
+}
+
+.slider__item {
+	width: 200px;
+	flex-shrink: 0;
+	margin: 0 10px;
+	height: 300px;
+
+	@include md-min {
+		width: 295px;
+		height: 340px;
+		margin: 0 20px;
+	}
+}
+
+.slider__item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider__inner--logos {
+	gap: 50px;
+}
+.slider__item--logo {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	max-height: 100px;
+	max-width: 150px;
+
+	@include sm-max {
+		height: 150px;
+	}
+}

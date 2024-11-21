@@ -1,0 +1,58 @@
+.link {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease, background-color 0.3s ease;
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+		background-color: $color-main;
+	}
+
+
+}
+
+.link-text {
+	position: relative;
+	font-weight: 450;
+
+	.count-up__section & {
+		font-size: 13px;
+
+		@include md-min {
+			font-size: 22px;
+		}
+	}
+
+	@include md-min {
+		font-size: 22px;
+	}
+}
+
+.link-icon {
+	padding: 0 10px;
+	display: inline-flex;
+	font-size: 15px;
+	color: $color-main;
+	margin-bottom: -3px;
+
+	@include md-max {
+		font-size: 13px;
+	}
+}

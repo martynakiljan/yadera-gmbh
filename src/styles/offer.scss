@@ -1,0 +1,107 @@
+.offer-text,
+.offer-subtext {
+	font-size: 16px;
+	@include content-width();
+	font-weight: 400;
+	margin-top: 70px;
+
+	@include md-min {
+		font-size: 22px;
+	}
+}
+
+.offer-text {
+	margin-bottom: 20px;
+}
+
+.offer-subtext {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.checkbox-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 20px 0;
+	flex-wrap: wrap;
+
+	.checkbox-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: -4px;
+		margin: 5px 0;
+
+		@include md-min {
+			margin: 0;
+		}
+	}
+
+	@include md-min {
+		flex-direction: row;
+		gap: 20px;
+		padding: 30px 0;
+	}
+}
+
+input[type='radio'] {
+	margin: 0;
+	margin-right: 5px;
+}
+
+input[type='radio']:checked {
+	accent-color: $color-red;
+}
+
+label {
+	@include md-min {
+		font-size: 20px;
+	}
+}
+
+.label-checkbox {
+	font-size: 16px;
+}
+
+.checkbox-container {
+	padding: 20px 0;
+}
+
+.contact-offer-form {
+	border-radius: 0;
+
+	@include md-min {
+		padding: 20px;
+		box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+	}
+}
+
+.offer-form__button {
+	width: 100%;
+	background-color: $color-red;
+	border: 1px solid $color-red;
+	color: $color-white;
+	padding: 15px;
+	font-weight: 450;
+	text-transform: uppercase;
+
+	@include sm-min {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	}
+	@include lg-min {
+		width: 100%;
+	}
+
+	&:hover {
+		background-color: $color-white;
+		border: 1px solid $color-red;
+		color: $color-red;
+	}
+}
