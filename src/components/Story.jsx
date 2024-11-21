@@ -7,7 +7,7 @@ const Story = () => {
 			<div className='section-col section-col__left'>
 				<Title text='unsere Gesichte' />
 			</div>
-			<div className='section-col section-col__right'>
+			<div className='section-col section-col__right' id='uber-uns'>
 				<div className='story__text-wrapper'>
 					<span className='story__text'>
 						Seit unserer Gründung im Jahr 2021 vereinen wir fundiertes Fachwissen und langjährige Erfahrung aus einer

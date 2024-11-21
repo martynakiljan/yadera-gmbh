@@ -95,6 +95,11 @@ input {
 
 .list-item {
 	display: flex;
+	margin-bottom: 5px;
+
+	@include md-min {
+		margin-bottom: 7px;
+	}
 }
 
 .list-subtitle {
@@ -120,7 +125,6 @@ a {
 
 li {
 	list-style: none;
-
 }
 .list-item:before {
 	margin-right: 5px;
@@ -132,4 +136,3 @@ li {
 		font-size: 13px;
 	}
 }
-

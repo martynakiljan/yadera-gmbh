@@ -149,17 +149,17 @@
 }
 
 .service-detail {
-	scroll-margin-top: 20vh;
+	scroll-margin-top: 16vh;
 }
 
 .add-svg {
 	position: relative;
 }
 .service-svg {
-	background-image: url(../assets/svg.svg);
+	background-image: url(../assets/workers.svg);
 	position: absolute;
 	right: 0;
-	bottom: 250px;
+	bottom: 270px;
 	height: 130vh;
 	background-position: center;
 	background-size: contain;
@@ -168,6 +168,8 @@
 	width: 500px;
 
 	@include md-max {
-		display: none;
+		bottom: 688px;
+		z-index: -1;
+		right: 0;
 	}
 }

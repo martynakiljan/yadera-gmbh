@@ -1,24 +1,78 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from 'react-router-dom'
-
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 const Footer = () => {
+	const navigate = useNavigate()
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 996)
+
+	const getPageMaxScroll = () => {
+		return (
+			Math.max(
+				document.body.scrollHeight,
+				document.body.offsetHeight,
+				document.documentElement.clientHeight,
+				document.documentElement.scrollHeight,
+				document.documentElement.offsetHeight
+			) - window.innerHeight
+		)
+	}
+
+	const scrollToTop = () => {
+		const maxScroll = getPageMaxScroll()
+		let top = -1
+
+		if (top > maxScroll) {
+			top = maxScroll
+		}
+
+		window.scroll({
+			top: top,
+			left: 0,
+			behavior: 'smooth',
+		})
+	}
+
+
+	const handleNavigation = (path, scrollToId) => {
+		if (isMobile) {
+			navigate(path)
+			setTimeout(() => {
+				scrollToTop()
+			}, 0)
+	
+			return
+		}
+		else if (scrollToId) {
+			navigate(path, { state: { scrollToId } })
+			window.scrollTo({
+				top: window.innerHeight * 0.7,
+				behavior: 'smooth',
+			})
+		} else {
+			navigate(path)
+		}
+	}
+
 	return (
 		<div className='footer'>
 			<div className='footer__inner'>
 				<div className='footer__col'>
 					{' '}
-					<NavLink className='footer-logo' href='/home' />
+					<NavLink className='footer-logo' to='/home' />
 				</div>
 				<div className='footer__col'>
 					<ul className='menu__list-footer'>
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/'>
+							<NavLink className='menu__link menu__link--footer' to='/' onClick={() => handleNavigation('/', null)}>
 								home
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/uber-uns' state={{ scrollToId: 'about' }}>
+							<NavLink
+								className='menu__link menu__link--footer'
+								to='/uber-uns'
+								onClick={() => handleNavigation('/uber-uns', 'uber-uns')}>
 								über uns
 							</NavLink>
 						</li>
@@ -26,18 +80,31 @@ const Footer = () => {
 							<NavLink
 								className='menu__link menu__link--footer'
 								to='/dienstleistungen'
-								state={{ scrollToId: 'services' }}>
+								onClick={() => handleNavigation('/dienstleistungen', 'dienstleistungen')}>
 								dienstleistungen
 							</NavLink>
 						</li>
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/projekte' state={{ scrollToId: 'projects' }}>
+							<NavLink
+								className='menu__link menu__link--footer'
+								to='/projekte'
+								onClick={() => handleNavigation('/projekte', 'projekte')}>
 								projekte
 							</NavLink>
 						</li>
-
 						<li className='menu__li'>
-							<NavLink className='menu__link menu__link--footer' to='/kontakt' state={{ scrollToId: 'kontakt' }}>
+							<NavLink
+								className='menu__link menu__link--footer'
+								to='/offerte'
+								onClick={() => handleNavigation('/offerte', 'offerte')}>
+								Angebotsanfrage
+							</NavLink>
+						</li>
+						<li className='menu__li'>
+							<NavLink
+								className='menu__link menu__link--footer'
+								to='/kontakt'
+								onClick={() => handleNavigation('/kontakt', 'kontakt')}>
 								kontakt
 							</NavLink>
 						</li>

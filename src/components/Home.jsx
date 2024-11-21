@@ -4,16 +4,16 @@ import Services from './Services'
 import Reviews from './Reviews'
 import Welcome from './Welcome'
 import SliderLogos from './SliderLogos'
-import About from './About'
+import AboutHome from './AboutHome'
 import CountUp from './CountUp'
 
 const Home = () => {
 	return (
-		<div >
+		<div>
 			<Header />
 			<Welcome />
 			<Services />
-			<About />
+			<AboutHome />
 			<CountUp />
 			<Slider />
 			<Reviews />

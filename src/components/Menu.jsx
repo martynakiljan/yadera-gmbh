@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Rotate as Hamburger } from 'hamburger-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 
 function Menu() {
 	const [isOpen, setIsOpen] = useState(false)
@@ -40,15 +40,59 @@ function Menu() {
 	}, [])
 
 	const navigate = useNavigate()
+	const location = useLocation()
+
+	const getPageMaxScroll = () => {
+		return (
+			Math.max(
+				document.body.scrollHeight,
+				document.body.offsetHeight,
+				document.documentElement.clientHeight,
+				document.documentElement.scrollHeight,
+				document.documentElement.offsetHeight
+			) - window.innerHeight
+		)
+	}
+
+	const scrollToTop = () => {
+		const maxScroll = getPageMaxScroll()
+		let top = -1
+
+		if (top > maxScroll) {
+			top = maxScroll
+		}
+
+		window.scroll({
+			top: top,
+			left: 0,
+			behavior: 'smooth',
+		})
+	}
+
 	const handleNavigation = (path, scrollToId) => {
+		const isHomePage = path === '/'
 		if (isMobile) {
 			navigate(path)
 			setTimeout(() => {
-				window.scrollTo(0, 0)
+				scrollToTop()
 			}, 0)
 			closeMenu()
-		} else {
+			return
+		}
+		if (isHomePage) {
+			navigate(path)
+			setTimeout(() => {
+				scrollToTop()
+			}, 0)
+			closeMenu()
+		} else if (scrollToId) {
 			navigate(path, { state: { scrollToId } })
+			closeMenu()
+		} else {
+			navigate(path)
+			setTimeout(() => {
+				scrollToTop()
+			}, 0)
 			closeMenu()
 		}
 	}
@@ -92,16 +136,10 @@ function Menu() {
 									kontakt
 								</span>
 							</li>
+							
 						</ul>
 					)}
-					<div className='menu-contact'>
-						<a className='menu__link menu__link--contact' href='tel:+41791332929'>
-							<span>
-								<FontAwesomeIcon icon={faPhoneVolume} />
-							</span>{' '}
-							<span className='menu__Link menu__link--phone'>+41 79 133 29 29</span>
-						</a>
-					</div>
+	
 				</div>
 
 				<div className='menu__desktop'>

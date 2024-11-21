@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+
 
 const Header = () => {
 	const ref = useRef(null)

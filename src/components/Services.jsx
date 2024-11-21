@@ -33,6 +33,7 @@ const Services = () => {
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service3')}>
 					<div className='service__item service__item-3'>
 						<h2 className='service__title'>Gipser</h2>
+					
 					</div>
 				</button>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service4')}>
