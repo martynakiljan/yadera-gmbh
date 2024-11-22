@@ -15,7 +15,10 @@ const About = () => {
 		if (scrollToId) {
 			const element = document.getElementById(scrollToId)
 			if (element) {
-				element.scrollIntoView({ behavior: 'smooth' })
+				window.scrollTo({
+					top: window.innerHeight * 0.7,
+					behavior: 'smooth',
+				})
 			}
 		}
 	}, [scrollToId])
@@ -23,7 +26,6 @@ const About = () => {
 	return (
 		<div>
 			{location.pathname === '/uber-uns' && <BigImage img={img} />}
-
 			<div className='section section-story'>
 				<div className='section-col section-col__left section-story-scroll' id='uber-uns'>
 					<Title text='unsere Gesichte' />

@@ -21,26 +21,22 @@ function AppContent() {
 	const location = useLocation()
 
 	useEffect(() => {
-        const body = document.body
-        if (location.pathname === '/dienstleistungen') {
-            body.classList.add('add-svg')
-        } else {
-            body.classList.remove('add-svg')
-        }
-    }, [location])
+		const body = document.body
+		if (location.pathname === '/dienstleistungen') {
+			body.classList.add('add-svg')
+		} else {
+			body.classList.remove('add-svg')
+		}
+	}, [location])
 
-	
 	useEffect(() => {
-		if (location.pathname === '/') { 
+		if (location.pathname === '/') {
 			window.scrollTo({
 				top: 0,
-				behavior: 'smooth', 
+				behavior: 'smooth',
 			})
 		}
-	}, [location]) 
-
-
-
+	}, [location])
 
 	const handleScroll = () => {
 		const currentScroll = window.scrollY

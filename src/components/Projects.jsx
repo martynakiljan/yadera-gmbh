@@ -4,8 +4,24 @@ import BigImage from './BigImage'
 import Title from './Title'
 import projects from '../data/projects'
 import { IoIosArrowUp } from 'react-icons/io'
+import { useLocation } from 'react-router'
 
 const Projects = () => {
+	const location = useLocation()
+	const scrollToId = location.state?.scrollToId
+
+	useEffect(() => {
+		if (scrollToId) {
+			const element = document.getElementById(scrollToId)
+			if (element) {
+				window.scrollTo({
+					top: window.innerHeight * 0.7,
+					behavior: 'smooth',
+				})
+			}
+		}
+	}, [scrollToId])
+
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			entries => {
@@ -33,8 +49,8 @@ const Projects = () => {
 	return (
 		<div>
 			<BigImage img={img} />
-			<div className='projects'>
-				<div className='section-col section-col__left' id='projekte'>
+			<div className='projects '>
+				<div className='section-col section-col__left section-scroll ' id='projekte'>
 					<Title text='unsere projekte' />
 				</div>
 				<div className='projects__inner'>

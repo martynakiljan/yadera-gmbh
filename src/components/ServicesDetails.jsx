@@ -12,7 +12,7 @@ const ServicesDetails = () => {
 			const element = document.getElementById(location.state.scrollToId)
 			if (element) {
 				window.scrollTo({
-					top: window.innerHeight,
+					top: window.innerHeight * 0.7,
 					behavior: 'smooth',
 				})
 			}
@@ -27,7 +27,7 @@ const ServicesDetails = () => {
 	return (
 		<>
 			<BigImage img={img} />
-			<div className='section services-details' id='dienstleistungen'>
+			<div className='section services-details section-scroll' id='dienstleistungen'>
 				<div className='section-col section-col__left'>
 					<Title text='Womit beschäftigen wir uns?' fullwidth={true} />
 				</div>

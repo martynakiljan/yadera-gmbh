@@ -119,6 +119,10 @@
 		.scrolled & {
 			background-color: $color-main;
 		}
+
+		@include md-max {
+			display: none;
+		}
 	}
 
 	&:hover::after {

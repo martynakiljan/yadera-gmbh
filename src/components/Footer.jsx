@@ -33,17 +33,15 @@ const Footer = () => {
 		})
 	}
 
-
 	const handleNavigation = (path, scrollToId) => {
 		if (isMobile) {
 			navigate(path)
 			setTimeout(() => {
 				scrollToTop()
 			}, 0)
-	
+
 			return
-		}
-		else if (scrollToId) {
+		} else if (scrollToId) {
 			navigate(path, { state: { scrollToId } })
 			window.scrollTo({
 				top: window.innerHeight * 0.7,
@@ -89,7 +87,7 @@ const Footer = () => {
 								className='menu__link menu__link--footer'
 								to='/projekte'
 								onClick={() => handleNavigation('/projekte', 'projekte')}>
-								projekte
+								unsere projekte
 							</NavLink>
 						</li>
 						<li className='menu__li'>

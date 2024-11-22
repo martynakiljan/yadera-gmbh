@@ -34,7 +34,6 @@ const Link = ({ text, href, id }) => {
 	const handleClick = (href, id) => {
 		const isMobile = window.innerWidth < 768
 
-		// Jeżeli na urządzeniu mobilnym, przechodzimy na stronę, a potem przewijamy do góry
 		if (isMobile) {
 			navigate(href)
 			setTimeout(() => {
@@ -42,18 +41,17 @@ const Link = ({ text, href, id }) => {
 			}, 0)
 			return
 		}
-		// Jeżeli jest przekazane `id`, przechodzimy do tego elementu po załadowaniu strony
 		else if (id) {
 			navigate(href, { state: { id } })
 			setTimeout(() => {
-				// Przewijamy stronę do elementu o `id`
+		
 				const element = document.getElementById(id)
 				if (element) {
 					element.scrollIntoView({ behavior: 'smooth' })
 				}
 			}, 0)
 		}
-		// Normalna nawigacja do strony bez przewijania
+
 		else {
 			navigate(href)
 			setTimeout(() => {
