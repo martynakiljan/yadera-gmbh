@@ -63,7 +63,7 @@ const About = () => {
 								Qualität, Verantwortung und Termintreue sind dabei unsere obersten Prinzipien. Vertrauen Sie auf ein
 								Team, das auch bei komplexen Baustellen stets die beste Lösung für Sie findet.
 							</span>
-							{location.pathname === '/uber-uns' && <Link text='Haben Sie eine Frage?' href='/kontakt' />}
+							{location.pathname === '/uber-uns' && <Link text='Haben Sie eine Frage?' href='/kontakt' id='kontakt' />}
 						</p>
 					</div>
 				</div>
