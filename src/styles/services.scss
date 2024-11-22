@@ -161,17 +161,18 @@
 	background-image: url(../assets/workers.svg);
 	position: absolute;
 	right: 0;
-	bottom: 270px;
+	bottom: 100px;
 	height: 130vh;
 	background-position: center;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 500px;
+	z-index: -1;
 
 	@include md-max {
 		bottom: 688px;
-		z-index: -1;
 		right: 0;
 	}
+
 }
