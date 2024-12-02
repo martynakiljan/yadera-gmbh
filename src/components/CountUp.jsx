@@ -18,7 +18,8 @@ const CountUp = () => {
 				const progress = Math.min(elapsed / duration, 1)
 				const newValue = start + progress * (target - start)
 
-				setCount(parseFloat(newValue.toFixed(1)))
+				// Ustawienie liczby jako liczba całkowita
+				setCount(Math.floor(newValue))
 
 				if (progress < 1) {
 					requestAnimationFrame(updateCount)
@@ -60,7 +61,7 @@ const CountUp = () => {
 						<div className='count-up__number'>+{count}</div>
 						<p className='count-up__text'>abgeschlossene Projekte</p>
 					</div>
-					<Link text='Möchten Sie unsere Projekte sehen?' id="projekte" href='/projekte' />
+					<Link text='Möchten Sie unsere Projekte sehen?' id='projekte' href='/projekte' />
 				</div>
 			</div>
 		</div>

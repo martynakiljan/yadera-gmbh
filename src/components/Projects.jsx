@@ -1,15 +1,18 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
+import { IoIosArrowForward } from 'react-icons/io'
+import { IoIosArrowBack } from 'react-icons/io'
 import img from '../assets/images/images/image-13.jpeg'
 import BigImage from './BigImage'
 import Title from './Title'
 import projects from '../data/projects'
 import { IoIosArrowUp } from 'react-icons/io'
-import { useLocation } from 'react-router'
 
 const Projects = () => {
 	const location = useLocation()
 	const scrollToId = location.state?.scrollToId
 
+	// Handle scroll to specific project section
 	useEffect(() => {
 		if (scrollToId) {
 			const element = document.getElementById(scrollToId)
@@ -22,6 +25,7 @@ const Projects = () => {
 		}
 	}, [scrollToId])
 
+	// Add intersection observer for animations
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			entries => {
@@ -46,49 +50,78 @@ const Projects = () => {
 		}
 	}, [])
 
+	// Slider handler function
+	const [currentImage, setCurrentImage] = useState({})
+
+	const handleNext = (index, project) => {
+		const current = currentImage[index] || 0
+		const images = [project.url, project.url2, project.url3].filter(Boolean)
+		const nextIndex = (current + 1) % images.length
+		setCurrentImage({ ...currentImage, [index]: nextIndex })
+	}
+
+	const handlePrev = (index, project) => {
+		const current = currentImage[index] || 0
+		const images = [project.url, project.url2, project.url3].filter(Boolean)
+		const prevIndex = (current - 1 + images.length) % images.length
+		setCurrentImage({ ...currentImage, [index]: prevIndex })
+	}
+
 	return (
 		<div>
 			<BigImage img={img} />
-			<div className='projects '>
-				<div className='section-col section-col__left section-scroll ' id='projekte'>
+			<div className='projects'>
+				<div className='section-col section-col__left section-scroll' id='projekte'>
 					<Title text='unsere projekte' />
 				</div>
 				<div className='projects__inner'>
-					{projects.map((project, index) => (
-						<div key={index} className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
-							<div className='project'>
-								<div className='project-col project-wrapper'>
-									<div className='project-img' style={{ backgroundImage: `url(${project.url})` }}></div>
-								</div>
-								<div className='project-col project-col__bg'>
-									<div className='project-info'>
-										<h3 className='project-title'>{project.title}</h3>
+					{projects.map((project, index) => {
+						const images = [project.url, project.url2, project.url3].filter(Boolean)
+						const currentImageIndex = currentImage[index] || 0
+						return (
+							<div key={index} className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
+								<div className='project'>
+									<div className='project-col project-wrapper'>
+										<div className='project-img' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+											<button className='slider-btn left' onClick={() => handlePrev(index, project)}>
+												<IoIosArrowBack />
+											</button>
+											<button className='slider-btn right' onClick={() => handleNext(index, project)}>
+												<IoIosArrowForward />
+											</button>
+										</div>
 									</div>
-									<div className='project-info__active'>
-										<div className='project-info__active--text'>
-											<h3 className='project-info__active-title'>{project.title}</h3>
-											<p className='project-info-text'>
-												<span className='project-info-text__title'>Type:</span> {project.buildingType}
-											</p>
-											<p className='project-info-text'>
-												<span className='project-info-text__title'>Construction Type:</span> {project.constructionType}
-											</p>
-											<p className='project-info-text'>
-												<span className='project-info-text__title'>Completion Year:</span> {project.completionYear}
-											</p>
-											<p className='project-info-text'>
-												<span className='project-info-text__title'>Description:</span> {project.description}
-											</p>
+									<div className='project-col project-col__bg'>
+										<div className='project-info'>
+											<h3 className='project-title'>{project.title}</h3>
+										</div>
+										<div className='project-info__active'>
+											<div className='project-info__active--text'>
+												<h3 className='project-info__active-title'>{project.title}</h3>
+												<p className='project-info-text'>
+													<span className='project-info-text__title'>Type:</span> {project.buildingType}
+												</p>
+												<p className='project-info-text'>
+													<span className='project-info-text__title'>Construction Type:</span>{' '}
+													{project.constructionType}
+												</p>
+												<p className='project-info-text'>
+													<span className='project-info-text__title'>Completion Year:</span> {project.completionYear}
+												</p>
+												<p className='project-info-text'>
+													<span className='project-info-text__title'>Description:</span> {project.description}
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
+								<div className='project__btn-more'>
+									<span className='project__btn-more-text'>mehr informationen</span>
+									<IoIosArrowUp />
+								</div>
 							</div>
-							<div className='project__btn-more'>
-								<span className='project__btn-more-text'>mehr informationen</span>
-								<IoIosArrowUp />
-							</div>
-						</div>
-					))}
+						)
+					})}
 				</div>
 			</div>
 		</div>

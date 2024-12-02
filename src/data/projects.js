@@ -1,4 +1,6 @@
 import img from '../assets/images/images/image-11.jpg'
+import img2 from '../assets/images/images/image-10.jpg'
+import img3 from '../assets/images/images/image-12.jpeg'
 
 const projects = [
 	{
@@ -8,6 +10,8 @@ const projects = [
 		completionYear: 2023,
 		description: 'Ein modernes Hochhaus mit luxuriösen Apartments und einem Blick auf die Skyline.',
 		url: img,
+		url2: img2,
+		url3: img3,
 	},
 	{
 		title: 'Office Complex',
@@ -17,6 +21,8 @@ const projects = [
 		description:
 			'Ein Komplex aus mehreren Bürogebäuden, ausgestattet mit energieeffizienter Technik und moderner Architektur.',
 		url: img,
+		url2: img2,
+		url3: img3,
 	},
 	{
 		title: 'Shopping Mall',
@@ -25,6 +31,8 @@ const projects = [
 		completionYear: 2024,
 		description: 'Ein großes Einkaufszentrum mit zahlreichen Geschäften, Restaurants und Unterhaltungsangeboten.',
 		url: img,
+		url2: img2,
+		url3: img3,
 	},
 	{
 		title: 'Hospital Facility',
@@ -34,6 +42,8 @@ const projects = [
 		description:
 			'Eine moderne medizinische Einrichtung mit spezialisierter Technik und einer Kapazität von 500 Betten.',
 		url: img,
+		url2: img2,
+		url3: img3,
 	},
 	{
 		title: 'Industrial Park',
@@ -42,6 +52,7 @@ const projects = [
 		completionYear: 2025,
 		description: 'Ein weitläufiger Industriepark für Produktions- und Lagerhallen, ausgestattet mit Logistikanlagen.',
 		url: img,
+		url2: img2,
 	},
 	{
 		title: 'University Campus',
@@ -50,6 +61,8 @@ const projects = [
 		completionYear: 2023,
 		description: 'Ein Universitätscampus mit modernen Hörsälen, Laboren und Forschungszentren.',
 		url: img,
+
+		url3: img3,
 	},
 	{
 		title: 'Sports Stadium',
@@ -59,6 +72,8 @@ const projects = [
 		description:
 			'Ein Stadion mit Platz für 50.000 Zuschauer, geeignet für verschiedene Sportarten und Veranstaltungen.',
 		url: img,
+		url2: img2,
+		url3: img3,
 	},
 	{
 		title: 'Luxury Hotel',
@@ -67,6 +82,8 @@ const projects = [
 		completionYear: 2023,
 		description: 'Ein luxuriöses Hotel mit 200 Zimmern, Spa, Konferenzsälen und Blick auf das Meer.',
 		url: img,
+		url2: img2,
+		url3: img3,
 	},
 	{
 		title: 'Convention Center',
@@ -75,6 +92,7 @@ const projects = [
 		completionYear: 2022,
 		description: 'Ein modernes Kongresszentrum mit Kapazitäten für große internationale Events und Ausstellungen.',
 		url: img,
+		url2: img2,
 	},
 	{
 		title: 'Museum of Modern Art',
@@ -83,6 +101,7 @@ const projects = [
 		completionYear: 2024,
 		description: 'Ein Kunstmuseum, das moderne und zeitgenössische Werke zeigt, mit beeindruckender Architektur.',
 		url: img,
+		url3: img3,
 	},
 ]
 
