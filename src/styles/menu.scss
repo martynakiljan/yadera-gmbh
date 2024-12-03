@@ -93,7 +93,7 @@
 	transition: color 0.3s ease;
 
 	.open & {
-		color: black;
+		color: $color-main;
 		text-align: center;
 		text-transform: lowercase;
 		margin: 0 auto;

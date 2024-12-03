@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/yadera-gmbh/static/css/main.cea3a357.css",
-    "main.js": "/yadera-gmbh/static/js/main.9c8ccc0c.js",
+    "main.css": "/yadera-gmbh/static/css/main.f2ff615f.css",
+    "main.js": "/yadera-gmbh/static/js/main.21914d87.js",
     "static/js/453.41f68d1d.chunk.js": "/yadera-gmbh/static/js/453.41f68d1d.chunk.js",
     "static/media/logo.png": "/yadera-gmbh/static/media/logo.d206b32b82ed6363602f.png",
     "static/media/logo-white.png": "/yadera-gmbh/static/media/logo-white.3ccca28c0dca87473a7c.png",
     "static/media/image-about.jpeg": "/yadera-gmbh/static/media/image-about.0be08c5dd308c7bd0b70.jpeg",
+    "static/media/image-10.jpg": "/yadera-gmbh/static/media/image-10.030a2d3dfe1717e94e5e.jpg",
     "static/media/image3.jpeg": "/yadera-gmbh/static/media/image3.4a370b774d2c13b534c8.jpeg",
     "static/media/header.jpg": "/yadera-gmbh/static/media/header.c35509101b62672c508b.jpg",
     "static/media/image4.jpeg": "/yadera-gmbh/static/media/image4.5d4b347366a42962a3ba.jpeg",
@@ -45,12 +46,12 @@
     "static/media/logo13.png": "/yadera-gmbh/static/media/logo13.8b1a5bb0e16004278558.png",
     "static/media/workers.svg": "/yadera-gmbh/static/media/workers.13a07dc6fa597aced638.svg",
     "index.html": "/yadera-gmbh/index.html",
-    "main.cea3a357.css.map": "/yadera-gmbh/static/css/main.cea3a357.css.map",
-    "main.9c8ccc0c.js.map": "/yadera-gmbh/static/js/main.9c8ccc0c.js.map",
+    "main.f2ff615f.css.map": "/yadera-gmbh/static/css/main.f2ff615f.css.map",
+    "main.21914d87.js.map": "/yadera-gmbh/static/js/main.21914d87.js.map",
     "453.41f68d1d.chunk.js.map": "/yadera-gmbh/static/js/453.41f68d1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cea3a357.css",
-    "static/js/main.9c8ccc0c.js"
+    "static/css/main.f2ff615f.css",
+    "static/js/main.21914d87.js"
   ]
 }

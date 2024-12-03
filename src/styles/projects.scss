@@ -7,7 +7,7 @@
 
 .project-wrapper {
 	position: relative;
-	transition: transform 0.8s ease;
+	transition: transform 0.3s ease-in-out;
 	width: 100%;
 
 	@include md-min {
@@ -31,23 +31,11 @@
 	aspect-ratio: 3/4;
 	max-height: 300px;
 	width: 100%;
+	transition: transform 0.5s ease;
+	overflow: hidden;
 
 	@include md-min {
 		max-height: 400px;
-	}
-}
-
-.project__item {
-	position: relative;
-
-	transform: translateX(100px);
-
-	&.revert {
-		transform: translateX(-100px);
-	}
-
-	&.visible {
-		transform: translateX(0);
 	}
 }
 
@@ -63,13 +51,52 @@
 
 	@include md-min {
 		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
 		align-items: stretch;
+		justify-content: space-between;
 
 		.revert & {
 			flex-direction: row-reverse;
 		}
+	}
+}
+
+.project__item {
+	position: relative;
+	opacity: 0;
+	transform: translateX(100px);
+	transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+	&.revert {
+		transform: translateX(-100px);
+	}
+
+	&.visible {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	&:hover .project-info__active {
+		display: block;
+		width: 50%;
+		right: 0;
+		left: 50%;
+		opacity: 1;
+		visibility: visible;
+		padding: 20px;
+		height: 102%;
+		transition: all 1s ease-out;
+
+		@include md-max {
+			width: 100%;
+			height: 52%;
+			left: 0;
+			top: 50%;
+		}
+	}
+
+	&.revert:hover .project-info__active {
+		right: 50%;
+		left: 0;
 	}
 }
 
@@ -92,13 +119,13 @@
 	padding: 10px 0;
 	color: $color-white;
 
+	@include md-min {
+		width: 50%;
+	}
+
 	.revert & {
 		right: auto;
 		left: 0;
-	}
-
-	@include md-min {
-		width: 50%;
 	}
 }
 
@@ -113,62 +140,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.project-info__active {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: $color-white;
 	width: 100%;
-	height: 102%;
-	display: none;
-	opacity: 0;
-	transition: opacity 0.3s ease;
-	z-index: 10;
-	visibility: hidden;
-	margin-top: -1px;
 
-	.revert & {
-		border-right: 0;
-	}
-}
+	&__active {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $color-white;
+		width: 100%;
+		height: 102%;
+		display: none;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		z-index: 10;
+		visibility: hidden;
+		margin-top: -1px;
 
-.project__item {
-	&:hover {
-		.project-info__active {
-			display: block;
-			width: 50%;
-			right: 0;
-			left: 50%;
-			opacity: 1;
-			visibility: visible;
-			padding: 20px;
-			height: 102%;
-
-			@include md-max {
-				width: 100%;
-				height: 52%;
-				left: 0;
-				top: 50%;
-				right: 0;
-			}
+		.revert & {
+			border-right: 0;
 		}
 	}
-
-	&.revert {
-		&:hover {
-			.project-info__active {
-				right: 50%;
-				left: 0;
-			}
-		}
-	}
-}
-
-.project-info {
-	width: 100%;
-	position: relative;
 }
 
 .project-info__active--text {
@@ -191,14 +182,10 @@
 .project-info-text {
 	padding-bottom: 10px;
 	font-weight: 400;
-}
 
-.project-info-text__title {
-	font-weight: 500;
-}
-
-.project__item {
-	position: relative;
+	&__title {
+		font-weight: 500;
+	}
 }
 
 .project-col__bg {
@@ -209,36 +196,19 @@
 	}
 }
 
-.project-img {
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	aspect-ratio: 3/4;
-	max-height: 300px;
-	width: 100%;
-	transition: transform 0.5s ease;
-	overflow: hidden;
-
-	@include md-min {
-		max-height: 400px;
-	}
-}
-
 .slider-btn {
 	position: absolute;
 	top: 50%;
 	height: 40px;
 	width: 40px;
 	transform: translateY(-50%);
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
 	color: $color-white;
 	border: none;
 	padding: 10px;
 	cursor: pointer;
 	z-index: 2;
 	font-size: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
 
 	&.left {
 		left: 10px;
