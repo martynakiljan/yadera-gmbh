@@ -20,6 +20,9 @@ function AppContent() {
 
 	const location = useLocation()
 
+
+
+
 	useEffect(() => {
 		const body = document.body
 		if (location.pathname === '/dienstleistungen') {
