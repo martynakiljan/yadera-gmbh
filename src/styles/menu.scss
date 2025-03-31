@@ -4,12 +4,12 @@
 	z-index: 111;
 	width: 100%;
 	padding: 10px 0;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.1); /* Początkowy kolor tła */
 	transition: background-color 0.3s ease, color 0.3s ease;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
 	&.scrolled {
-		background-color: $color-white;
+		background-color: $color-white; /* Kolor tła po przewinięciu */
 		border-color: rgba(0, 0, 0, 0.1);
 
 		.menu__link {

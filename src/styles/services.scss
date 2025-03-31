@@ -43,20 +43,27 @@
 }
 
 .service__item-1 {
+	background-image: url(../assets/images/services/service-1.jpg);
+}
+
+
+.service__item-2 {
 	background-image: url(../assets/images/services/service-2.jpg);
 }
 
-.service__item-2 {
-	background-image: url(../assets/images/services/service-1.png);
-}
 
 .service__item-3 {
 	background-image: url(../assets/images/services/service-3.png);
 }
 
+.service__item-5 {
+	background-image: url(../assets/images/services/service-5.jpg);
+}
 .service__item-4 {
 	background-image: url(../assets/images/services/service-4.jpg);
 }
+
+
 
 .service__item:hover {
 	transform: scale(1.1);
@@ -175,6 +182,17 @@
 
 	&.revert {
 		flex-direction: row-reverse;
+	}
+
+	transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+	&.revert {
+		transform: translateX(-100px);
+	}
+
+	&.visible {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }
 

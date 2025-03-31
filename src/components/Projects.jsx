@@ -99,17 +99,17 @@ const Projects = () => {
 											<div className='project-info__active--text'>
 												<h3 className='project-info__active-title'>{project.title}</h3>
 												<p className='project-info-text'>
-													<span className='project-info-text__title'>Type:</span> {project.buildingType}
+													<span className='project-info-text__title'>Arbeitsgattungen</span> {project.work}
 												</p>
 												<p className='project-info-text'>
-													<span className='project-info-text__title'>Construction Type:</span>{' '}
-													{project.constructionType}
+													<span className='project-info-text__title'>Leistungen:</span>{' '}
+													{project.services}
 												</p>
 												<p className='project-info-text'>
 													<span className='project-info-text__title'>Completion Year:</span> {project.completionYear}
 												</p>
 												<p className='project-info-text'>
-													<span className='project-info-text__title'>Description:</span> {project.description}
+													<span className='project-info-text__title'></span> {project.text}
 												</p>
 											</div>
 										</div>

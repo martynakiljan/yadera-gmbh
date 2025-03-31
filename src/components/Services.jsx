@@ -21,12 +21,12 @@ const Services = () => {
 			</div>
 			<div className='service__inner'>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service1')}>
-					<div className='service__item service__item-2'>
+					<div className='service__item service__item-1'>
 						<h2 className='service__title'>Malerarbeiten</h2>
 					</div>
 				</button>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service2')}>
-					<div className='service__item service__item-3'>
+					<div className='service__item service__item-2'>
 						<h2 className='service__title'>Renovationen</h2>
 					</div>
 				</button>
@@ -37,13 +37,13 @@ const Services = () => {
 					</div>
 				</button>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service4')}>
-					<div className='service__item service__item-1'>
+					<div className='service__item service__item-4'>
 						<h2 className='service__title'>Fassadenarbeiten</h2>
 					</div>
 				</button>
 
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service5')}>
-					<div className='service__item service__item-4'>
+					<div className='service__item service__item-5'>
 						<h2 className='service__title'>Plattenlegger</h2>
 					</div>
 				</button>

@@ -24,30 +24,7 @@ const ServicesDetails = () => {
 		}
 	}, [location.state])
 
-	// Intersection Observer for fade-in animation
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			entries => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('visible')
-					} else {
-						entry.target.classList.remove('visible')
-					}
-				})
-			},
-			{
-				threshold: 0.1,
-			}
-		)
 
-		const serviceItems = document.querySelectorAll('.service-details')
-		serviceItems.forEach(item => observer.observe(item))
-
-		return () => {
-			serviceItems.forEach(item => observer.unobserve(item))
-		}
-	}, [])
 
 	return (
 		<>
@@ -58,7 +35,7 @@ const ServicesDetails = () => {
 				</div>
 			</div>
 			<div className='service-details fade-in'>
-				<div className='service-details__item service-details__item-title service__item-2'>
+				<div className='service-details__item service-details__item-title service__item-1'>
 					<p className='service-details__title'>Malararbeiten</p>
 				</div>
 				<div className='service-details__item service-details__item-list'>
@@ -72,7 +49,7 @@ const ServicesDetails = () => {
 				</div>
 			</div>
 			<div className='service-details fade-in revert'>
-				<div className='service-details__item service-details__item-title service__item-3'>
+				<div className='service-details__item service-details__item-title service__item-2'>
 					<p className='service-details__title'>Gipserarbeiten</p>
 				</div>
 				<div className='service-details__item service-details__item-list'>
