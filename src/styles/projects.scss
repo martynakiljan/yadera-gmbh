@@ -1,223 +1,250 @@
 .projects {
-    @include content-width();
-    margin: 0 auto;
-    overflow: hidden;
-    overflow-x: clip;
+	@include content-width();
+	margin: 0 auto;
+	overflow: hidden;
+	overflow-x: clip;
 }
 
 .project-wrapper {
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
+	position: relative;
+	transition: transform 0.3s ease-in-out;
+	width: 100%;
 
-    @include md-min {
-        width: 50%;
-    }
+	@include md-min {
+		width: 50%;
+	}
 }
 
 .project-col {
-    width: 100%;
+	width: 100%;
 
-    @include md-min {
-        width: 50%;
-    }
+	@include md-min {
+		width: 50%;
+	}
 }
 
 .project-img {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 3/4;
-    max-height: 300px;
-    width: 100%;
-    transition: transform 0.5s ease;
-    overflow: hidden;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: 3/4;
+	max-height: 300px;
+	width: 100%;
+	transition: transform 0.5s ease;
+	overflow: hidden;
 
-    @include md-min {
-        max-height: 400px;
-    }
+	@include md-min {
+		max-height: 400px;
+	}
 }
 
 .project {
-    cursor: pointer;
-    z-index: 22;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 40px;
+	cursor: pointer;
+	z-index: 22;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 40px;
 
-    @include md-min {
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: space-between;
+	@include md-min {
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-between;
 
-        .revert & {
-            flex-direction: row-reverse;
-        }
-    }
+		.revert & {
+			flex-direction: row-reverse;
+		}
+	}
 }
 
 .project__item {
-    position: relative;
-    opacity: 1;
-    transform: none;
-    transition: none;
+	position: relative;
+	opacity: 1;
+	transform: none;
+	transition: none;
 
-    &.revert {
-        transform: none;
-    }
+	&.revert {
+		transform: none;
+	}
 
-    &.visible {
-        transform: none;
-        opacity: 1;
-    }
+	&.visible {
+		transform: none;
+		opacity: 1;
+	}
 
-    &:hover .project-info__active {
-        display: block;
-        width: 50%;
-        right: 0;
-        left: 50%;
-        opacity: 1;
-        visibility: visible;
-        padding: 20px;
-        height: 102%;
-        transition: opacity 2s ease-in-out, background-color 2s ease-in-out;  // Płynna i wolna animacja
+	@include md-max {
+		height: 100%;
+		opacity: 1;
+		width: 100%;
+		height: 52%;
+		left: 0;
+		top: 50%;
+	}
 
-        @include md-max {
-            width: 100%;
-            height: 52%;
-            left: 0;
-            top: 50%;
-        }
-    }
+	&:hover .project-info__active {
+		display: block;
+		width: 50%;
+		right: 0;
+		left: 50%;
+		opacity: 1;
+		visibility: visible;
+		padding: 20px;
+		height: 102%;
+		transition: opacity 2s ease-in-out, background-color 2s ease-in-out; // Płynna i wolna animacja
 
-    &.revert:hover .project-info__active {
-        right: 50%;
-        left: 0;
-    }
+		@include md-max {
+			width: 100%;
+			height: 52%;
+			left: 0;
+			top: 50%;
+			padding: 20px 0;
+		}
+	}
+
+	&.revert:hover .project-info__active {
+		right: 50%;
+		left: 0;
+	}
 }
 
 .project-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 30px;
-    color: $color-white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 22px;
+	color: $color-white;
+
+	@include md-min {
+		font-size: 30px;
+	}
 }
 
 .project__btn-more {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    right: 0;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-    padding: 10px 0;
-    color: $color-white;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	right: 0;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	padding: 10px 0;
+	color: $color-white;
 
-    @include md-min {
-        width: 50%;
-    }
+	@include md-min {
+		width: 50%;
+	}
 
-    .revert & {
-        right: auto;
-        left: 0;
-    }
+	.revert & {
+		right: auto;
+		left: 0;
+	}
 }
 
 .project__btn-more-text {
-    padding: 0 8px;
-    font-size: 12px;
+	padding: 0 8px;
+	font-size: 12px;
 }
 
 .project-info {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+	position: relative;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 
-    &__active {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: $color-white;
-        width: 100%;
-        height: 102%;
-        display: none;
-        opacity: 0;
-        transition: opacity 2s ease-in-out, background-color 2s ease-in-out;  // Płynna i wolna animacja tła
-        z-index: 10;
-        visibility: hidden;
-        margin-top: -1px;
+	&__active {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $color-white;
+		width: 100%;
+		height: 102%;
+		display: none;
+		opacity: 0;
+		transition: opacity 2s ease-in-out, background-color 2s ease-in-out; // Płynna i wolna animacja tła
+		z-index: 10;
+		visibility: hidden;
+		margin-top: -1px;
 
-        .revert & {
-            border-right: 0;
-        }
-    }
+		.revert & {
+			border-right: 0;
+		}
+	}
 }
 
 .project-info__active--text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: flex-start;
+
+	@include md-max {
+		height: auto;
+	}
 }
 
 .project-info__active-title {
-    margin-bottom: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-decoration-color: $color-red;
-    text-underline-offset: 5px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-decoration-color: $color-red;
+	text-underline-offset: 5px;
+
+	@include md-max {
+		font-size: 16px;
+		line-height: 1.3;
+	}
 }
 
 .project-info-text {
-    padding-bottom: 10px;
-    font-weight: 400;
+	padding-bottom: 10px;
+	font-weight: 400;
 
-    &__title {
-        font-weight: 500;
-    }
+	&__title {
+		font-weight: 500;
+	}
+
+	@include sm-max {
+		font-size: 12px;
+	}
 }
 
 .project-col__bg {
-    background-color: $color-red;
+	background-color: $color-red;
 
-    @include md-max {
-        height: 300px;
-    }
+	@include md-max {
+		height: 300px;
+	}
 }
 
 .slider-btn {
-    position: absolute;
-    top: 50%;
-    height: 40px;
-    width: 40px;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: $color-white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 2;
-    font-size: 20px;
+	position: absolute;
+	top: 50%;
+	height: 40px;
+	width: 40px;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: $color-white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 2;
+	font-size: 20px;
 
-    &.left {
-        left: 10px;
-    }
+	&.left {
+		left: 10px;
+	}
 
-    &.right {
-        right: 10px;
-    }
+	&.right {
+		right: 10px;
+	}
 
-    &:hover {
-        background-color: $color-main;
-    }
+	&:hover {
+		background-color: $color-main;
+	}
 }
