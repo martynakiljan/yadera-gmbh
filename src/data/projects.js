@@ -132,7 +132,7 @@ const projects = [
 	},
 	{
 		title: 'Tapezierarbeiten – Wandgestaltung mit Charakter',
-		completionYear: 'diverse',
+		completionYear: '2021',
 		services: 'Tapezieren von Bild- und Motivtapeten',
 		text: 'In mehreren Projekten setzten wir kreative Tapezierarbeiten um – darunter großformatige Bildtapeten in Fitnessbereichen sowie individuell illustrierte Wandmotive in Unternehmensräumen. Jede Fläche wurde mit Sorgfalt gestaltet und trägt zur einzigartigen Atmosphäre und Identität des jeweiligen Ortes bei.',
 		url: img28,
