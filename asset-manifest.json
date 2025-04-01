@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/yadera-gmbh/static/css/main.c3e4343b.css",
+    "main.css": "/yadera-gmbh/static/css/main.262f478f.css",
     "main.js": "/yadera-gmbh/static/js/main.0a8c2109.js",
     "static/js/453.a2cc38d4.chunk.js": "/yadera-gmbh/static/js/453.a2cc38d4.chunk.js",
     "static/media/14-min.jpg": "/yadera-gmbh/static/media/14-min.518ba5343792eb543000.jpg",
@@ -86,12 +86,12 @@
     "static/media/logo4.png": "/yadera-gmbh/static/media/logo4.baed5cfbc49fc8512dcc.png",
     "static/media/logo13.png": "/yadera-gmbh/static/media/logo13.8b1a5bb0e16004278558.png",
     "index.html": "/yadera-gmbh/index.html",
-    "main.c3e4343b.css.map": "/yadera-gmbh/static/css/main.c3e4343b.css.map",
+    "main.262f478f.css.map": "/yadera-gmbh/static/css/main.262f478f.css.map",
     "main.0a8c2109.js.map": "/yadera-gmbh/static/js/main.0a8c2109.js.map",
     "453.a2cc38d4.chunk.js.map": "/yadera-gmbh/static/js/453.a2cc38d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3e4343b.css",
+    "static/css/main.262f478f.css",
     "static/js/main.0a8c2109.js"
   ]
 }
