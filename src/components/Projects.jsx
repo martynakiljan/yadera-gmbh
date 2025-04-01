@@ -82,14 +82,18 @@ const Projects = () => {
 							<div key={index} className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
 								<div className='project'>
 									<div className='project-col project-wrapper'>
-										<div className='project-img' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
-											<button className='slider-btn left' onClick={() => handlePrev(index, project)}>
-												<IoIosArrowBack />
-											</button>
-											<button className='slider-btn right' onClick={() => handleNext(index, project)}>
-												<IoIosArrowForward />
-											</button>
-										</div>
+									<div className='project-img' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+	{images.length > 1 && (
+		<>
+			<button className='slider-btn left' onClick={() => handlePrev(index, project)}>
+				<IoIosArrowBack />
+			</button>
+			<button className='slider-btn right' onClick={() => handleNext(index, project)}>
+				<IoIosArrowForward />
+			</button>
+		</>
+	)}
+</div>
 									</div>
 									<div className='project-col project-col__bg'>
 										<div className='project-info'>
@@ -98,15 +102,15 @@ const Projects = () => {
 										<div className='project-info__active'>
 											<div className='project-info__active--text'>
 												<h3 className='project-info__active-title'>{project.title}</h3>
+												{/* <p className='project-info-text'>
+													<span className='project-info-text__title'>Arbeitsgattungen</span> {project.title}
+												</p> */}
 												<p className='project-info-text'>
-													<span className='project-info-text__title'>Arbeitsgattungen</span> {project.work}
+													<span className='project-info-text__title'>Leistungen:</span> {project.services}
 												</p>
 												<p className='project-info-text'>
-													<span className='project-info-text__title'>Leistungen:</span>{' '}
-													{project.services}
-												</p>
-												<p className='project-info-text'>
-													<span className='project-info-text__title'>Completion Year:</span> {project.completionYear}
+													<span className='project-info-text__title'>Fertigstellungsjahr:</span>{' '}
+													{project.completionYear}
 												</p>
 												<p className='project-info-text'>
 													<span className='project-info-text__title'></span> {project.text}

@@ -1,5 +1,6 @@
 import Title from './Title'
-import Link from './Link'
+import { NavLink } from 'react-router-dom'
+
 const Values = () => {
 	return (
 		<div className='section section-values'>
@@ -36,7 +37,7 @@ const Values = () => {
 						Lassen Sie uns gemeinsam Ihre Ideen verwirklichen – mit Yadera GmbH setzen Sie auf ein Unternehmen, das mit
 						Leidenschaft, Erfahrung und Verlässlichkeit arbeitet
 					</span>
-					<Link href='/offerte' text='Jetzt Angebot anfordern!' id='offerte'></Link>
+					
 				</div>
 			</div>
 		</div>

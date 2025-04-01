@@ -6,6 +6,11 @@ import BigImage from './BigImage'
 import img from '../assets/images/images/image-12.jpeg'
 import { useLocation } from 'react-router'
 const Contact = () => {
+	useEffect(() => {
+		const scrollPosition = window.innerWidth < 992 ? 0 : window.innerHeight * 0.7
+		window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+	}, [])
+
 	const location = useLocation()
 	const scrollToId = location.state?.scrollToId
 
@@ -47,8 +52,19 @@ const Contact = () => {
 	return (
 		<>
 			<BigImage img={img} />
+			<p className='offer-text section' id='kontakt'>
+				Möchten Sie mehr über unsere Dienstleistungen erfahren oder eine individuelle Offerte für Ihr Projekt erhalten?
+				Kontaktieren Sie uns einfach! Wir erstellen Ihnen gerne ein transparentes und unverbindliches Angebot, das genau
+				auf Ihre Wünsche und Anforderungen abgestimmt ist. Bei Yadera GmbH legen wir grossen Wert auf klare
+				Kommunikation, faire Preise und eine zuverlässige Umsetzung.
+			</p>
+			<p className='offer-subtext'>
+				Bei Yadera GmbH legen wir grossen Wert auf klare Kommunikation, faire Preise und eine zuverlässige Umsetzung.
+			</p>
+			<p className='quote full-width'>Lassen Sie uns gemeinsam Ihre Ideen realisieren!</p>
+
 			<div className='section'>
-				<div className='section-col section-col__left section-scroll ' id='kontakt'>
+				<div className='section-col section-col__left section-scroll '>
 					<Title text='sollen wir reden?' />
 				</div>
 				<div className='section-col section-col__right'>

@@ -93,14 +93,6 @@ const Footer = () => {
 						<li className='menu__li'>
 							<NavLink
 								className='menu__link menu__link--footer'
-								to='/offerte'
-								onClick={() => handleNavigation('/offerte', 'offerte')}>
-								Angebotsanfrage
-							</NavLink>
-						</li>
-						<li className='menu__li'>
-							<NavLink
-								className='menu__link menu__link--footer'
 								to='/kontakt'
 								onClick={() => handleNavigation('/kontakt', 'kontakt')}>
 								kontakt

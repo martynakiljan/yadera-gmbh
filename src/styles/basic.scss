@@ -94,10 +94,11 @@ input {
 
 .list-item {
 	display: flex;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 
 	@include md-min {
 		margin-bottom: 14px;
+		margin-bottom: 5px;
 	}
 }
 

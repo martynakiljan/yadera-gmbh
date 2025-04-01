@@ -32,10 +32,11 @@
 	position: relative;
 	overflow: hidden;
 	font-family: 'Montserrat', sans-serif;
-	background-repeat: no-repeat;
-	background-size: cover;
 	aspect-ratio: 1/1;
 	transition: transform 0.3s ease;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	@include md-max {
 		aspect-ratio: 4/3;
@@ -46,11 +47,9 @@
 	background-image: url(../assets/images/services/service-1.jpg);
 }
 
-
 .service__item-2 {
 	background-image: url(../assets/images/services/service-2.jpg);
 }
-
 
 .service__item-3 {
 	background-image: url(../assets/images/services/service-3.png);
@@ -62,8 +61,6 @@
 .service__item-4 {
 	background-image: url(../assets/images/services/service-4.jpg);
 }
-
-
 
 .service__item:hover {
 	transform: scale(1.1);
@@ -161,6 +158,10 @@
 
 .service-details__item {
 	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 20px 10px;
 
 	@include md-min {
 		width: 50%;
@@ -173,39 +174,38 @@
 
 .service-details {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	align-items: stretch;
 	@include content-width();
 	margin: 0 auto;
 	overflow: hidden;
 	overflow-x: clip;
 
-	&.revert {
-		flex-direction: row-reverse;
-	}
-
-	transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-	&.revert {
-		transform: translateX(-100px);
-	}
-
-	&.visible {
-		transform: translateX(0);
-		opacity: 1;
+	@include md-min {
+		flex-direction: row;
+		justify-content: space-between;
+		&.revert {
+			flex-direction: row-reverse;
+		}
 	}
 }
 
 .service-details__item-title {
 	aspect-ratio: 3/4;
 	max-height: 300px;
-	width: 50%;
+	width: 100%;
 	transition: transform 0.5s ease;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+
+	@include md-min {
+		width: 50%;
+	}
 
 	&::before {
 		content: '';
@@ -225,10 +225,14 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 25px;
 	color: $color-white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 11;
+
+	@include md-min {
+		font-size: 30px;
+	}
 }
