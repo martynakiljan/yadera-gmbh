@@ -4,7 +4,7 @@ const Welcome = () => {
 	return (
 		<>
 			<h1 className='welcome-title welcome-text'>Willkommen bei Yadera GmbH </h1>
-			<h2 className='welcome-title welcome-subtitle'>Ihrem Partner für erstklassige Handwerksarbeit!</h2>
+			<h2 className='welcome-title welcome-subtitle'>Ihr Partner für erstklassige Handwerksarbeit!</h2>
 			<div className='section section-welcome'>
 				<div className='section-col section-col__left'>{<Title text='Erfahren Sie mehr' />}</div>
 				<div className='section-col section-col__right'>

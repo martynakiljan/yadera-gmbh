@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yadera-gmbh/static/css/main.b2a4dd4f.css",
-    "main.js": "/yadera-gmbh/static/js/main.fa031f88.js",
+    "main.css": "/yadera-gmbh/static/css/main.1221a6ce.css",
+    "main.js": "/yadera-gmbh/static/js/main.ad403cf0.js",
     "static/js/453.a2cc38d4.chunk.js": "/yadera-gmbh/static/js/453.a2cc38d4.chunk.js",
     "static/media/14-min.jpg": "/yadera-gmbh/static/media/14-min.518ba5343792eb543000.jpg",
     "static/media/1-min.jpg": "/yadera-gmbh/static/media/1-min.bcde3669b2265bfb7235.jpg",
@@ -9,7 +9,6 @@
     "static/media/2-min.jpg": "/yadera-gmbh/static/media/2-min.62479fda2378568feaea.jpg",
     "static/media/3-min.jpg": "/yadera-gmbh/static/media/3-min.c23ac4aa8f3115d8ec71.jpg",
     "static/media/service-5.jpg": "/yadera-gmbh/static/media/service-5.c23ac4aa8f3115d8ec71.jpg",
-    "static/media/logo-white.png": "/yadera-gmbh/static/media/logo-white.3ccca28c0dca87473a7c.png",
     "static/media/image-about.jpeg": "/yadera-gmbh/static/media/image-about.0be08c5dd308c7bd0b70.jpeg",
     "static/media/33-min.jpg": "/yadera-gmbh/static/media/33-min.3042f463b3c5cb96c289.jpg",
     "static/media/5-min.jpg": "/yadera-gmbh/static/media/5-min.051913bbf9fd8bee4234.jpg",
@@ -60,6 +59,7 @@
     "static/media/26-min.jpg": "/yadera-gmbh/static/media/26-min.7bd94dac10abe5a6fe7e.jpg",
     "static/media/36-min.jpg": "/yadera-gmbh/static/media/36-min.7121c937951da8303edf.jpg",
     "static/media/logo9.png": "/yadera-gmbh/static/media/logo9.af95fb69d74efc1685e8.png",
+    "static/media/logo-white.png": "/yadera-gmbh/static/media/logo-white.020cbf3b024de33f9fa0.png",
     "static/media/logo2.png": "/yadera-gmbh/static/media/logo2.b5e9ada4b3ce69bab02a.png",
     "static/media/slider17.jpg": "/yadera-gmbh/static/media/slider17.4d49b7dd5f223b49ed0d.jpg",
     "static/media/service-3.png": "/yadera-gmbh/static/media/service-3.f9651a2391ec226d88aa.png",
@@ -87,12 +87,12 @@
     "static/media/logo4.png": "/yadera-gmbh/static/media/logo4.baed5cfbc49fc8512dcc.png",
     "static/media/logo13.png": "/yadera-gmbh/static/media/logo13.8b1a5bb0e16004278558.png",
     "index.html": "/yadera-gmbh/index.html",
-    "main.b2a4dd4f.css.map": "/yadera-gmbh/static/css/main.b2a4dd4f.css.map",
-    "main.fa031f88.js.map": "/yadera-gmbh/static/js/main.fa031f88.js.map",
+    "main.1221a6ce.css.map": "/yadera-gmbh/static/css/main.1221a6ce.css.map",
+    "main.ad403cf0.js.map": "/yadera-gmbh/static/js/main.ad403cf0.js.map",
     "453.a2cc38d4.chunk.js.map": "/yadera-gmbh/static/js/453.a2cc38d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2a4dd4f.css",
-    "static/js/main.fa031f88.js"
+    "static/css/main.1221a6ce.css",
+    "static/js/main.ad403cf0.js"
   ]
 }

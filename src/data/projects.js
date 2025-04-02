@@ -88,7 +88,7 @@ const projects = [
 		title: 'Dachaufstockung EFH – Rüti',
 		completionYear: '2024',
 		services: 'Fassaden- und Malerarbeiten',
-		text: 'Beim Neubau in Grüningen führten wir 2023 Malerarbeiten innen und außen aus. Innenräume wurden in Grüntönen und Anthrazit gestaltet, aussen erhielt die Fassade einen frischen Anstrich. Zusätzlich wurden Strassenmarkierungen aufgebracht. Das Ergebnis: ein modernes und stimmiges Gesamtbild.',
+		text: 'Bei der Dachaufstockung eines EFH in Rüti übernahmen wir die Bearbeitung der Giebelwände inkl. neuer Dämmung, Netzeinbettung, Deckputz und Anstrich. Zudem wurden alle Fassadenseiten frisch gestrichen und Fensterbänke montiert. Das Ergebnis: eine rundum modernisierte, zukunftsorientierte Gebäudehülle.',
 		url: img13,
 		url2: img14,
 	},
