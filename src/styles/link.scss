@@ -24,8 +24,6 @@
 		transform: scaleX(1);
 		background-color: $color-main;
 	}
-
-
 }
 
 .link-text {
@@ -36,12 +34,12 @@
 		font-size: 13px;
 
 		@include md-min {
-			font-size: 22px;
+			font-size: 18px;
 		}
 	}
 
 	@include md-min {
-		font-size: 22px;
+		font-size: 18px;
 	}
 }
 

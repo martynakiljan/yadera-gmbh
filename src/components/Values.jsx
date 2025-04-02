@@ -35,7 +35,7 @@ const Values = () => {
 					</span>
 					<span className='values__text about__text'>
 						Lassen Sie uns gemeinsam Ihre Ideen verwirklichen – mit Yadera GmbH setzen Sie auf ein Unternehmen, das mit
-						Leidenschaft, Erfahrung und Verlässlichkeit arbeitet
+						Leidenschaft, Erfahrung und Verlässlichkeit arbeitet.
 					</span>
 					
 				</div>

@@ -82,18 +82,18 @@ const Projects = () => {
 							<div key={index} className={`project__item ${index % 2 !== 0 ? 'revert' : ''}`}>
 								<div className='project'>
 									<div className='project-col project-wrapper'>
-									<div className='project-img' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
-	{images.length > 1 && (
-		<>
-			<button className='slider-btn left' onClick={() => handlePrev(index, project)}>
-				<IoIosArrowBack />
-			</button>
-			<button className='slider-btn right' onClick={() => handleNext(index, project)}>
-				<IoIosArrowForward />
-			</button>
-		</>
-	)}
-</div>
+										<div className='project-img' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+											{images.length > 1 && (
+												<>
+													<button className='slider-btn left' onClick={() => handlePrev(index, project)}>
+														<IoIosArrowBack />
+													</button>
+													<button className='slider-btn right' onClick={() => handleNext(index, project)}>
+														<IoIosArrowForward />
+													</button>
+												</>
+											)}
+										</div>
 									</div>
 									<div className='project-col project-col__bg'>
 										<div className='project-info'>

@@ -118,9 +118,7 @@ const Footer = () => {
 					<div>
 						{' '}
 						<p className='contact__title '>Kontakt</p>
-						<a className='contact__tel' href='tel:+41791332929'>
-							+41 79 133 29 29{' '}
-						</a>
+					
 						<a className='contact__email' href='mailto:info@yadera.ch'>
 							info@yadera.ch
 						</a>

@@ -25,7 +25,7 @@ const Header = () => {
 					className='header__image'>
 					<motion.div className='header__title' style={{ opacity }}>
 						<div className='header__text-wrapper'>
-							<h1 className='header__text'>Das Fassaden und Maller Team.</h1>
+							<h1 className='header__text'>Yadera – Qualität, die bleibt.</h1>
 							<NavLink to='/kontakt' className='header__button'>
 								Jetzt Angebot anfordern!
 							</NavLink>

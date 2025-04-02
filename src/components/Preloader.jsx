@@ -6,7 +6,7 @@ function Preloader({ setLoading }) {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setLoading(false)
-		}, 1500)
+		}, 1000)
 
 		return () => clearTimeout(timer)
 	}, [setLoading])
@@ -30,7 +30,7 @@ function Preloader({ setLoading }) {
 				}}
 				exit={{ opacity: 0 }}
 				transition={{
-					duration: 1.2,
+					duration: 1,
 					ease: 'easeOut',
 				}}
 			/>

@@ -106,22 +106,7 @@ const Contact = () => {
 									/>
 									{errors.email && <p className='error-message'>{errors.email.message}</p>}
 								</div>
-								<div className='form-group'>
-									<label htmlFor='phone'>Telefon</label>
-									<input
-										id='phone'
-										type='text'
-										placeholder='+41 767 342 245'
-										{...register('phone', {
-											required: 'Telefon ist erforderlich',
-											pattern: {
-												value: /^[+]?[\d\s-]+$/,
-												message: 'Telefon darf nur Zahlen, Leerzeichen und "-" enthalten',
-											},
-										})}
-									/>
-									{errors.phone && <p className='error-message'>{errors.phone.message}</p>}
-								</div>
+						
 								<div className='form-group'>
 									<label htmlFor='message'>Nachricht</label>
 									<textarea

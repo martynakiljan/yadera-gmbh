@@ -31,7 +31,6 @@
 	aspect-ratio: 3/4;
 	max-height: 300px;
 	width: 100%;
-	transition: transform 0.5s ease;
 	overflow: hidden;
 
 	@include md-min {
@@ -92,7 +91,7 @@
 		visibility: visible;
 		padding: 20px;
 		height: 102%;
-		transition: opacity 2s ease-in-out, background-color 2s ease-in-out; // Płynna i wolna animacja
+
 		background-color: $color-white;
 
 		@include md-max {
@@ -101,7 +100,6 @@
 			left: 0;
 			top: 50%;
 			padding: 20px 0;
-			top: calc(50% - 20px);
 		}
 	}
 
@@ -168,7 +166,7 @@
 		height: 102%;
 		display: none;
 		opacity: 0;
-		transition: opacity 2s ease-in-out, background-color 2s ease-in-out; // Płynna i wolna animacja tła
+
 		z-index: 10;
 		visibility: hidden;
 		margin-top: -1px;
@@ -221,6 +219,7 @@
 .project-col__bg {
 	background-color: $color-red;
 
+	transition: opacity 0.5s ease-in-out, background-color 0.5s ease;
 	@include md-max {
 		height: 300px;
 	}

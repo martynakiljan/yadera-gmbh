@@ -17,7 +17,7 @@ const Services = () => {
 	return (
 		<div className={`services ${fadeOut ? 'fade-out' : ''}`}>
 			<div className='section-col section-col__left' id='diensteilungen'>
-				<Title text='Womit beschäftigen wir uns?'  fullwidth={true}/>
+				<Title text='Womit beschäftigen wir uns?' fullwidth={true} />
 			</div>
 			<div className='service__inner'>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service1')}>
@@ -33,7 +33,6 @@ const Services = () => {
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service3')}>
 					<div className='service__item service__item-3'>
 						<h2 className='service__title'>Gipser</h2>
-					
 					</div>
 				</button>
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service4')}>
@@ -44,7 +43,7 @@ const Services = () => {
 
 				<button className='service__item--wrapper' onClick={() => handleServiceClick('service5')}>
 					<div className='service__item service__item-5'>
-						<h2 className='service__title'>Plattenlegger</h2>
+						<h2 className='service__title'>Plattenleger</h2>
 					</div>
 				</button>
 			</div>

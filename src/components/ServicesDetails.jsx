@@ -9,17 +9,17 @@ const ServicesDetails = () => {
 
 	useEffect(() => {
 		if (location.state?.serviceId) {
-			const element = document.getElementById(location.state.serviceId);
+			const element = document.getElementById(location.state.serviceId)
 			if (element) {
-				const offset = 100;
-				const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+				const offset = 100
+				const elementPosition = element.getBoundingClientRect().top + window.scrollY
 				window.scrollTo({
 					top: elementPosition - offset,
 					behavior: 'smooth',
-				});
+				})
 			}
 		}
-	}, [location.state]);
+	}, [location.state])
 
 	return (
 		<>
@@ -31,15 +31,15 @@ const ServicesDetails = () => {
 			</div>
 			<div className='service-details fade-in' id='service1'>
 				<div className='service-details__item service-details__item-title service__item-1'>
-					<p className='service-details__title'>Malararbeiten</p>
+					<p className='service-details__title'>Malerarbeiten</p>
 				</div>
 				<div className='service-details__item service-details__item-list'>
 					<ul>
-						<li className='list-item'>Wand- und Deckenanstriche</li>
-						<li className='list-item'>Lackierarbeiten (Türen, Fenster, Geländer)</li>
-						<li className='list-item'>Kreative Wandgestaltung (z. B. Spachteltechniken, Tapeten)</li>
-						<li className='list-item'>Fassadenanstriche und -schutz</li>
-						<li className='list-item'>Korrosions- und Holzschutz</li>
+						<li className='list-item'>Innere & Äussere Malerarbeiten</li>
+						<li className='list-item'>Spritzarbeiten</li>
+						<li className='list-item'>Tapezierarbeiten</li>
+						<li className='list-item'>Strassenmarkierungen</li>
+						<li className='list-item'>Dekorative Arbeiten</li>
 					</ul>
 				</div>
 			</div>
@@ -65,7 +65,7 @@ const ServicesDetails = () => {
 					<ul>
 						<li className='list-item'>Glatt- und Strukturputze</li>
 						<li className='list-item'>Trockenbau und Deckenverkleidungen</li>
-						<li className='list-item'>Innen- und Außenputzarbeiten</li>
+						<li className='list-item'>Innen- und Aussenputzarbeiten</li>
 						<li className='list-item'>Reparaturen und Ausbesserungen</li>
 						<li className='list-item'>Schall- und Brandschutzverkleidungen</li>
 					</ul>
@@ -87,7 +87,7 @@ const ServicesDetails = () => {
 			</div>
 			<div className='service-details fade-in ' id='service5'>
 				<div className='service-details__item service-details__item-title service__item-5'>
-					<p className='service-details__title'> Plattenlegerarbeiten</p>
+					<p className='service-details__title'>Plattenlegerarbeiten</p>
 				</div>
 				<div className='service-details__item service-details__item-list'>
 					<ul>

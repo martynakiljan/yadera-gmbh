@@ -10,9 +10,15 @@
 	flex-wrap: nowrap;
 	gap: 20px;
 
-	@include md-min {
+	@include sm-min {
 		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap: wrap;
 		gap: 10px;
+	}
+
+	@include md-min {
+		flex-wrap: nowrap;
 	}
 }
 
@@ -22,9 +28,17 @@
 	overflow: hidden;
 	border: none;
 	padding: 0;
+	background-color: transparent;
+
+	@include sm-min {
+		width: 45%;
+		justify-content: flex-start;
+	}
 
 	@include md-min {
 		width: calc(50% - 10px);
+		flex-direction: row;
+		flex-wrap: nowrap;
 	}
 }
 
@@ -194,7 +208,7 @@
 
 .service-details__item-title {
 	aspect-ratio: 3/4;
-	max-height: 300px;
+	max-height: 400px;
 	width: 100%;
 	transition: transform 0.5s ease;
 	overflow: hidden;

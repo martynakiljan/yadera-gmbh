@@ -49,11 +49,10 @@ import img42 from '../assets/images/projects/42-min.jpg'
 
 const projects = [
 	{
-		title: 'Neubau – Zur Farb, Dielsdorf',
+		title: 'Neubau Zur Farb 4 MFH – Dielsdorf',
 		work: '4 MFH / 70 Wohnungen',
 		completionYear: '2024',
-		services: 'Maler-, Plattenleger- und Fassadenarbeiten',
-		text: 'Beim Neubau von vier Mehrfamilienhäusern in Dielsdorf übernahmen wir 2024 die Maler- und Plattenlegerarbeiten. Im Innenbereich verlegten wir hochwertige Boden- und Wandplatten sowie präzise ausgeführte Malerarbeiten. Zusätzlich wurden im Außenbereich Dämmarbeiten im Perimeter Bereich umgesetzt. Das Projekt steht für Qualität, Termintreue und saubere Ausführung',
+		services: 'Beim Neubau in Grüningen führten wir 2023 Malerarbeiten innen und außen aus. Innenräume wurden in Grüntönen und Anthrazit gestaltet, aussen erhielt die Fassade einen frischen Anstrich.Zusätzlich wurden Strassenmarkierungen aufgebracht. Das Ergebnis: ein modernes und stimmiges Gesamtbild.',
 		url: img1,
 		url2: img2,
 		url3: img3,
@@ -113,7 +112,7 @@ const projects = [
 		title: 'Servicearbeiten – Globegarden Childcare',
 		completionYear: 'laufend',
 		services: 'Maler-, Gipser- und Plattenlegerarbeiten',
-		text: 'Bei der Dachaufstockung eines EFH in Rüti übernahmen wir die Bearbeitung der Giebelwände inkl. neuer Dämmung, Netzeinbettung, Deckputz und Anstrich. Zudem wurden alle Fassadenseiten frisch gestrichen und Fensterbänke montiert. Das Ergebnis: eine rundum modernisierte, zukunftsorientierte Gebäudehülle.',
+		text: 'Für die Globegarden Childcare führen wir laufend Servicearbeiten an verschiedenen Standorten in der Deutschschweiz durch. Dazu gehören Maler-, Gipser- und Plattenlegerarbeiten, mit dem Ziel, eine gepflegte, sichere und kinderfreundliche Umgebung zu erhalten. Die Arbeiten werden flexibel und effizient im laufenden Betrieb umgesetzt.',
 		url: img19,
 		url2: img20,
 		url3: img21,
