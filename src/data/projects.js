@@ -32,7 +32,6 @@ import img31 from '../assets/images/projects/31-min.jpg'
 import img32 from '../assets/images/projects/32-min.jpg'
 import img33 from '../assets/images/projects/33-min.jpg'
 import img34 from '../assets/images/projects/34-min.jpg'
-
 import img35 from '../assets/images/projects/35-min.jpg'
 import img36 from '../assets/images/projects/36-min.jpg'
 import img37 from '../assets/images/projects/37-min.jpg'
