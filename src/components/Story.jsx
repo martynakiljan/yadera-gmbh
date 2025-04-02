@@ -21,7 +21,7 @@ const Story = () => {
 
 					<span className='quote'>«Yadera GmbH – Qualität, auf die Sie bauen können»</span>
 				</div>
-				<Images />
+				{/* <Images /> */}
 			</div>
 		</div>
 	)
