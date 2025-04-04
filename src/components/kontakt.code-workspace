@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "kontakt",
+			"path": "../../../../../../Applications/XAMPP/xamppfiles/htdocs/kontakt"
+		},
+		{
+			"name": "yadera-gmbh",
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}

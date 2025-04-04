@@ -36,17 +36,40 @@ const Contact = () => {
 	const [isSubmitting, setIsSubmitting] = useState(false)
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const onSubmit = () => {
+	const onSubmit = async data => {
 		setIsSubmitting(true)
-		setTimeout(() => {
-			setIsSubmitting(false)
-			setIsSubmitted(true)
 
-			setTimeout(() => {
-				setIsSubmitted(false)
+		try {
+			const response = await fetch('http://https://www.yadera.ch/kontakt/send_mail.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+				},
+				body: new URLSearchParams({
+					name: data.name,
+					email: data.email,
+					message: `Nachricht von ${data.name} (${data.email}):\n\n${data.message}`,
+				}).toString(),
+			})
+
+			const result = await response.json()
+			console.log(result)
+			if (result.status === 'success') {
+				setIsSubmitted(true)
 				reset()
-			}, 3000)
-		}, 1500)
+
+				// Dodajemy timeout, aby zresetować stronę po 3 sekundach
+				setTimeout(() => {
+					window.location.reload() // Zresetowanie strony
+				}, 3000) // 3000ms = 3 sekundy
+			} else {
+				alert('Błąd: ' + result.message)
+			}
+		} catch (error) {
+			console.error('Błąd:', error)
+		}
+
+		setIsSubmitting(false)
 	}
 
 	return (
@@ -72,7 +95,7 @@ const Contact = () => {
 						{isSubmitted ? (
 							<p className='thank-you-message'>Danke. Wir werden Sie bald kontaktieren!</p>
 						) : (
-							<form onSubmit={handleSubmit(onSubmit)} action='kmarytnak@icloud.com' method='POST'>
+							<form onSubmit={handleSubmit(onSubmit)}>
 								<div className='form-group'>
 									<label htmlFor='name'>Ihr Name</label>
 									<input
@@ -106,7 +129,7 @@ const Contact = () => {
 									/>
 									{errors.email && <p className='error-message'>{errors.email.message}</p>}
 								</div>
-						
+
 								<div className='form-group'>
 									<label htmlFor='message'>Nachricht</label>
 									<textarea
@@ -115,6 +138,7 @@ const Contact = () => {
 										{...register('message', { required: 'Nachricht ist erforderlich' })}></textarea>
 									{errors.message && <p className='error-message'>{errors.message.message}</p>}
 								</div>
+
 								{isSubmitting ? (
 									<ClipLoader color='#242527' size={24} />
 								) : (
