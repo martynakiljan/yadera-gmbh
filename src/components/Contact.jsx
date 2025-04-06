@@ -40,15 +40,13 @@ const Contact = () => {
 		setIsSubmitting(true)
 
 		try {
-			const response = await fetch('http://https://www.yadera.ch/kontakt/send_mail.php', {
+			const response = await fetch('http://127.0.0.1:8000', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				},
 				body: new URLSearchParams({
-					name: data.name,
-					email: data.email,
-					message: `Nachricht von ${data.name} (${data.email}):\n\n${data.message}`,
+					...data,
 				}).toString(),
 			})
 
@@ -63,7 +61,7 @@ const Contact = () => {
 					window.location.reload() // Zresetowanie strony
 				}, 3000) // 3000ms = 3 sekundy
 			} else {
-				alert('Błąd: ' + result.message)
+				console.log(result.message)
 			}
 		} catch (error) {
 			console.error('Błąd:', error)
@@ -95,7 +93,7 @@ const Contact = () => {
 						{isSubmitted ? (
 							<p className='thank-you-message'>Danke. Wir werden Sie bald kontaktieren!</p>
 						) : (
-							<form onSubmit={handleSubmit(onSubmit)}>
+							<form onSubmit={handleSubmit(onSubmit)} noValidate>
 								<div className='form-group'>
 									<label htmlFor='name'>Ihr Name</label>
 									<input
@@ -138,7 +136,23 @@ const Contact = () => {
 										{...register('message', { required: 'Nachricht ist erforderlich' })}></textarea>
 									{errors.message && <p className='error-message'>{errors.message.message}</p>}
 								</div>
-
+								<input
+									type='checkbox'
+									name='contact_me_by_fax_only'
+									value='1'
+									inert
+									style={{
+										position: 'absolute',
+										clip: 'rect(0 0 0 0)',
+										clipPath: 'inset(50%)',
+										height: '1px',
+										overflow: 'hidden',
+										whiteSpace: 'nowrap',
+										width: '1px',
+									}}
+									tabIndex='-1'
+									autoComplete='asdhjasdahsd'
+								/>
 								{isSubmitting ? (
 									<ClipLoader color='#242527' size={24} />
 								) : (
