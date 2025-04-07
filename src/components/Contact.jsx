@@ -56,15 +56,14 @@ const Contact = () => {
 				setIsSubmitted(true)
 				reset()
 
-				// Dodajemy timeout, aby zresetować stronę po 3 sekundach
 				setTimeout(() => {
-					window.location.reload() // Zresetowanie strony
-				}, 3000) // 3000ms = 3 sekundy
+					window.location.reload()
+				}, 5000)
 			} else {
 				console.log(result.message)
 			}
 		} catch (error) {
-			console.error('Błąd:', error)
+			console.error('Error:', error)
 		}
 
 		setIsSubmitting(false)
@@ -140,7 +139,7 @@ const Contact = () => {
 									type='checkbox'
 									name='contact_me_by_fax_only'
 									value='1'
-									inert
+						            inert='true'
 									style={{
 										position: 'absolute',
 										clip: 'rect(0 0 0 0)',

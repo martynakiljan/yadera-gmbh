@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yadera-gmbh/static/css/main.43b3e747.css",
-    "main.js": "/yadera-gmbh/static/js/main.76bbe0f8.js",
+    "main.css": "/yadera-gmbh/static/css/main.3bedcaab.css",
+    "main.js": "/yadera-gmbh/static/js/main.5c6511ea.js",
     "static/js/453.a2cc38d4.chunk.js": "/yadera-gmbh/static/js/453.a2cc38d4.chunk.js",
     "static/media/14-min.jpg": "/yadera-gmbh/static/media/14-min.518ba5343792eb543000.jpg",
     "static/media/1-min.jpg": "/yadera-gmbh/static/media/1-min.bcde3669b2265bfb7235.jpg",
@@ -34,7 +34,6 @@
     "static/media/10-min.jpg": "/yadera-gmbh/static/media/10-min.3bf269a660f552540b9b.jpg",
     "static/media/29-min.jpg": "/yadera-gmbh/static/media/29-min.9f30a40fb5de6c01dffd.jpg",
     "static/media/23-min.jpg": "/yadera-gmbh/static/media/23-min.9562f9519af7472e5290.jpg",
-    "static/media/image-9.jpg": "/yadera-gmbh/static/media/image-9.6207c7c02dd6fc0cd814.jpg",
     "static/media/image-12.jpeg": "/yadera-gmbh/static/media/image-12.317289a4c88870dd603c.jpeg",
     "static/media/image-13.jpeg": "/yadera-gmbh/static/media/image-13.43a5d5cf0cf48d6c91d2.jpeg",
     "static/media/30-min.jpg": "/yadera-gmbh/static/media/30-min.ecef4e3654db51638a83.jpg",
@@ -84,12 +83,12 @@
     "static/media/logo4.png": "/yadera-gmbh/static/media/logo4.baed5cfbc49fc8512dcc.png",
     "static/media/logo13.png": "/yadera-gmbh/static/media/logo13.8b1a5bb0e16004278558.png",
     "index.html": "/yadera-gmbh/index.html",
-    "main.43b3e747.css.map": "/yadera-gmbh/static/css/main.43b3e747.css.map",
-    "main.76bbe0f8.js.map": "/yadera-gmbh/static/js/main.76bbe0f8.js.map",
+    "main.3bedcaab.css.map": "/yadera-gmbh/static/css/main.3bedcaab.css.map",
+    "main.5c6511ea.js.map": "/yadera-gmbh/static/js/main.5c6511ea.js.map",
     "453.a2cc38d4.chunk.js.map": "/yadera-gmbh/static/js/453.a2cc38d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43b3e747.css",
-    "static/js/main.76bbe0f8.js"
+    "static/css/main.3bedcaab.css",
+    "static/js/main.5c6511ea.js"
   ]
 }

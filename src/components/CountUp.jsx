@@ -18,7 +18,7 @@ const CountUp = () => {
 				const progress = Math.min(elapsed / duration, 1)
 				const newValue = start + progress * (target - start)
 
-				// Ustawienie liczby jako liczba całkowita
+
 				setCount(Math.floor(newValue))
 
 				if (progress < 1) {

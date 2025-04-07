@@ -181,7 +181,7 @@
 		width: 50%;
 		padding: 40px;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 	}
 }
@@ -208,7 +208,7 @@
 
 .service-details__item-title {
 	aspect-ratio: 3/4;
-	max-height: 400px;
+	max-height: 300px;
 	width: 100%;
 	transition: transform 0.5s ease;
 	overflow: hidden;
@@ -219,6 +219,7 @@
 
 	@include md-min {
 		width: 50%;
+		max-height: 400px;
 	}
 
 	&::before {

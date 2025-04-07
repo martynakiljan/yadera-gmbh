@@ -65,8 +65,7 @@ function AppContent() {
 						<Route path='/uber-uns' element={<About />} />
 						<Route path='/dienstleistungen' element={<ServicesDetails />} />
 						<Route path='/projekte' element={<Projects />} />
-						<Route path='/kontakt' element={<Contact />} />
-						<Route path='/offerte' element={<OffertForm />} />
+						<Route path='/kontakt' element={<Contact />} />ßß
 						<Route path='/*' element={<Navigate to='/' />} />
 					</Routes>
 					<ContactWidget />

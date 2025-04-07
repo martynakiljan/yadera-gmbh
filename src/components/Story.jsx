@@ -1,5 +1,4 @@
 import Title from './Title'
-import Images from './Images'
 
 const Story = () => {
 	return (
@@ -20,7 +19,6 @@ const Story = () => {
 					</span>
 					<span className='quote'>«Yadera GmbH – Qualität, auf die Sie bauen können»</span>
 				</div>
-				{/* <Images /> */}
 			</div>
 		</div>
 	)

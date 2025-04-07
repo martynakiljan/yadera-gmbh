@@ -12,7 +12,6 @@ const Projects = () => {
 	const location = useLocation()
 	const scrollToId = location.state?.scrollToId
 
-	// Handle scroll to specific project section
 	useEffect(() => {
 		if (scrollToId) {
 			const element = document.getElementById(scrollToId)
@@ -24,8 +23,6 @@ const Projects = () => {
 			}
 		}
 	}, [scrollToId])
-
-	// Add intersection observer for animations
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			entries => {
@@ -50,7 +47,6 @@ const Projects = () => {
 		}
 	}, [])
 
-	// Slider handler function
 	const [currentImage, setCurrentImage] = useState({})
 
 	const handleNext = (index, project) => {

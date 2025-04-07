@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Rotate as Hamburger } from 'hamburger-react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
 import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 
 function Menu() {
@@ -172,14 +170,7 @@ function Menu() {
 								kontakt
 							</span>
 						</li>
-						{/* <li className='menu__li-desktop'>
-							<a className='menu__link menu__link--contact' href='tel:+41791332929'>
-								<span>
-									<FontAwesomeIcon icon={faPhoneVolume} />
-								</span>{' '}
-								<span className='menu__Link menu__link--phone'>+41 79 133 29 29</span>
-							</a>
-						</li> */}
+	
 					</ul>
 				</div>
 			</div>
